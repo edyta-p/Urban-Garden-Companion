@@ -8,7 +8,7 @@
 
 # // Exposition= ['N', 'S', 'E', 'W']
 # // Climate = ['Temperate", "Warm", "Cold"]
-# // waterning = {"lot": 3, "some": 2, "little": 1
+# // watering = {"lot": 3, "some": 2, "little": 1
 # // category = ['Flower', 'aromatc', 'Fruit', 'Vegetable', 'Leaf plant']
 
 leaf_plants = [
@@ -18,7 +18,7 @@ leaf_plants = [
     description: "A delicate fern with feather-like and elegant fronds.",
     climate: "Warm",
     exposure: "E",
-    waterning: 1,
+    watering: 1,
     plant_care: "Avoid drafts and regularly mist the leaves to maintain humidity."
   },
   {
@@ -27,7 +27,7 @@ leaf_plants = [
     description: "A fast-growing evergreen shrub with lance-shaped dark green leaves.",
     climate: "Warm",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune regularly to maintain a compact shape."
   },
   {
@@ -36,7 +36,7 @@ leaf_plants = [
     description: "A climbing plant with dark green, shiny, heart-shaped leaves.",
     climate: "Warm",
     exposure: "O",
-    waterning: 1,
+    watering: 1,
     plant_care: "Attach the ivy to a support to help with growth."
   },
   {
@@ -45,8 +45,8 @@ leaf_plants = [
     description: "A succulent plant with thick, pointed leaves that form a rosette.",
     climate: "temperate",
     exposure: "S",
-    waterning: 3,
-    plant_care: "Avoid waterning the leaves to prevent fungal diseases."
+    watering: 3,
+    plant_care: "Avoid watering the leaves to prevent fungal diseases."
   },
   {
     name: "Lavender",
@@ -54,7 +54,7 @@ leaf_plants = [
     description: "An aromatic plant with narrow gray leaves and fragrant purple flowers.",
     climate: "warm",
     exposure: "S",
-    waterning: 1,
+    watering: 1,
     plant_care: "Prune regularly to promote growth."
   },
   {
@@ -63,7 +63,7 @@ leaf_plants = [
     description: "An evergreen shrub with white, fragrant flowers that bloom in winter.",
     climate: "cold",
     exposure: "N",
-    waterning: 1,
+    watering: 1,
     plant_care: "Prune after flowering to encourage new growth."
   },
   {
@@ -72,7 +72,7 @@ leaf_plants = [
     description: "A flowering shrub with large, showy blooms in shades of pink, blue, white, and purple.",
     climate: "temperate",
     exposure: "O",
-    waterning: 3,
+    watering: 3,
     plant_care: "Prune in late winter or early spring before new growth appears."
   },
   {
@@ -98,7 +98,7 @@ aromatics = [
     description: "Basil is an annual herb appreciated for its fresh and sweet taste.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Water regularly and pinch the leaves to promote plant growth."
   },
   {
@@ -107,7 +107,7 @@ aromatics = [
     description: "Parsley is an annual herbaceous plant, often used as a condiment.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Water regularly and harvest the leaves as soon as they are big enough."
   },
   {
@@ -116,7 +116,7 @@ aromatics = [
     description: "Thyme is a perennial plant appreciated for its aromatic leaves.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune the plant after flowering to promote the growth of new shoots."
   },
   {
@@ -125,7 +125,7 @@ aromatics = [
     description: "Mint is a perennial plant appreciated for its fresh and menthol taste.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Water regularly and pinch the leaves to promote plant growth."
   },
   {
@@ -134,7 +134,7 @@ aromatics = [
     description: "Rosemary is a perennial plant appreciated for its aromatic leaves.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune the plant after flowering to promote the growth of new shoots."
   },
   {
@@ -143,7 +143,7 @@ aromatics = [
     description: "Estragon is a perennial plant appreciated for its aromatic leaves, which are often used in cooking.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Water regularly and pinch the leaves to promote plant growth."
   },
   {
@@ -152,8 +152,8 @@ aromatics = [
     description: "Chives are a popular herb in French cuisine. They have a mild, slightly oniony taste.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
-    plant_care: "Chives can be grown from seeds or plants. They thrive in nutrient-rich, well-draining soil and require regular waterning. Regular pruning is necessary to encourage healthy growth. Chives can be harvested by cutting the leaves at the base of the plant."
+    watering: 2,
+    plant_care: "Chives can be grown from seeds or plants. They thrive in nutrient-rich, well-draining soil and require regular watering. Regular pruning is necessary to encourage healthy growth. Chives can be harvested by cutting the leaves at the base of the plant."
   }
 ]
 aromatics.each do |plant|
@@ -167,7 +167,7 @@ flowers = [
     description: "A perennial plant with prickly stems and fragrant flowers.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune at the beginning of spring and provide ample water during the growing season."
   },
   {
@@ -176,7 +176,7 @@ flowers = [
     description: "A plant with yellow flowers and edible stems.",
     climate: "Warm",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Support tall stems with stakes or trellises, water regularly."
   },
   {
@@ -185,7 +185,7 @@ flowers = [
     description: "A spring-blooming plant with brightly colored flowers.",
     climate: "temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Plant bulbs in the fall, allow leaves to dry naturally before removing them."
   },
   {
@@ -194,7 +194,7 @@ flowers = [
     description: "A small plant with white or yellow flowers and a yellow center.",
     climate: "Temperate",
     exposure: "E",
-    waterning: 2,
+    watering: 2,
     plant_care: "Regularly remove faded flowers to encourage continuous blooming."
   },
   {
@@ -203,7 +203,7 @@ flowers = [
     description: "A fragrant flowering plant with purple, pink, or white flowers.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune after flowering to shape and control growth."
   },
   {
@@ -212,7 +212,7 @@ flowers = [
     description: "A plant with sword-shaped leaves and large spectacular flowers.",
     climate: "Temperate",
     exposure: "E",
-    waterning: 2,
+    watering: 2,
     plant_care: "Divide clumps every 3-4 years to maintain plant health."
   },
   {
@@ -221,7 +221,7 @@ flowers = [
     description: "A plant with large clusters of pink, blue, and white flowers.",
     climate: "Temperate",
     exposure: "E",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune in late winter or early spring and water regularly during the growing season."
   }
 ]
@@ -237,7 +237,7 @@ fruits = [
     description: "A sweet and crunchy fruit with red, green, or yellow skin.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Regularly prune to maintain the shape of the tree and water regularly during the growing season."
   },
   {
@@ -246,7 +246,7 @@ fruits = [
     Description: "A low-growing, perennial plant with white or pink flowers and red, juicy fruit with small seeds on the surface.",
     climate: "temperate",
     Exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Plant in well-draining soil and protect fruit from slugs and birds."
   },
   {
@@ -255,7 +255,7 @@ fruits = [
     Description: "A perennial plant with thorny canes that produce red, black, or yellow fruit with a hollow core.",
     Climate: "temperate",
     Exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune canes that have borne fruit and protect fruit from birds and insects."
   },
   {
@@ -264,7 +264,7 @@ fruits = [
     description: "A sweet and tropical fruit with yellow skin.",
     climate: "Warm",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Regularly fertilize to promote growth and water regularly to maintain soil moisture."
   },
   {
@@ -273,7 +273,7 @@ fruits = [
     description: "A juicy and sweet fruit with orange skin.",
     climate: "Warm",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune in late winter or early spring to promote growth of new shoots and water regularly during the growing season."
   },
   {
@@ -282,7 +282,7 @@ fruits = [
     description: "A sweet and juicy fruit often used for making wine.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune in winter to maintain the shape of the vine and water regularly during the growing season."
   },
   {
@@ -291,7 +291,7 @@ fruits = [
     description: "A juicy and sweet fruit with yellow or green skin.",
     climate: "Temperate",
     exposure: "N",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune regularly to maintain the shape of the tree and water regularly during the growing season."
   },
   {
@@ -300,7 +300,7 @@ fruits = [
     description: "A sweet and tangy fruit with brown fuzzy skin.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 1,
+    watering: 1,
     plant_care: "Prune in winter to maintain the shape of the vine and water regularly during the growing season."
   },
   {
@@ -309,7 +309,7 @@ fruits = [
     description: "A juicy and sweet fruit with velvety skin.",
     climate: "Temperate",
     exposure: "S",
-    waterning: 2,
+    watering: 2,
     plant_care: "Prune in late winter or early spring to promote the growth of new shoots and water regularly during the growing season."
   }
 ]
@@ -326,7 +326,7 @@ vegetables = [
     description: "A red, yellow, or green fruit often used as a vegetable.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Stake the plants to keep them upright and water regularly to maintain soil moisture."
   },
   {
@@ -335,7 +335,7 @@ vegetables = [
     Description: "A fast-growing, cool-season root vegetable with a crispy texture and a peppery taste.",
     climate: "temperate",
     Exposure: "0",
-    waterning: 1,
+    watering: 1,
     plant_care: "Plant seeds in succession every few weeks for a continuous harvest."
   },
   {
@@ -344,7 +344,7 @@ vegetables = [
     Description: "A leafy vegetable with a slightly bitter taste and crunchy texture, often used in salads or cooked dishes.",
     climate: "cold",
     Exposure: "E",
-    waterning: 1,
+    watering: 1,
     plant_care: "To produce blanched leaves, cover the plants with a dark cloth or board a few weeks before harvest."
   },
   {
@@ -353,7 +353,7 @@ vegetables = [
     description: "A sweet root often eaten raw or cooked.",
     climate: "Temperate",
     exposure: "E",
-    waterning: 1,
+    watering: 1,
     plant_care: "Plant seeds shallowly and water regularly to maintain soil moisture. Thin out the plants to give them space to grow."
   },
   {
@@ -362,7 +362,7 @@ vegetables = [
     description: "A long green vegetable often used in cooking.",
     climate: "warm",
     exposure: "O",
-    waterning: 1,
+    watering: 1,
     plant_care: "Water regularly to maintain soil moisture and harvest zucchinis before they become too large."
   },
   {
@@ -371,7 +371,7 @@ vegetables = [
     Description: "A fast-growing vine plant with elongated, green fruit and a mild, refreshing taste.",
     climate: "Warm temperate to tropical",
     Exposure: "o",
-    waterning: 2,
+    watering: 2,
     plant_care: "Provide support for the vines to climb and harvest fruit when they are still small for the best taste."
   },
   {
@@ -380,7 +380,7 @@ vegetables = [
     description: "A root often used as a vegetable or starch.",
     climate: "Temperate ",
     exposure: "N",
-    waterning: 1,
+    watering: 1,
     plant_care: "Mound soil around plants to encourage tuber growth and water regularly to maintain soil moisture. Harvest potatoes after the plant's aerial parts die off."
   },
   {
@@ -389,7 +389,7 @@ vegetables = [
     description: "A green vegetable often consumed cooked or canned.",
     climate: "Temperate",
     exposure: "O",
-    waterning: 2,
+    watering: 2,
     plant_care: "Stake the plants to keep them upright and water regularly to maintain soil moisture."
 }
 ]
