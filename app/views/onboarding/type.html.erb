@@ -1,0 +1,11 @@
+<h1>Type of available space</h1>
+
+<ul>
+  <% ['window ledge', 'balcony', 'terrace'].each do |space| %>
+  <li>
+    <%= space %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Next step", next_wizard_path %>
