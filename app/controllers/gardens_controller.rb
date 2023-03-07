@@ -1,4 +1,5 @@
 class GardensController < ApplicationController
+
   before_action :set_gardens, only: [:show]
 
   def show
