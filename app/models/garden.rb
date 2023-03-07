@@ -1,4 +1,6 @@
 class Garden < ApplicationRecord
+  has_many :plants_gardens
+
   TYPE = ['window ledge', 'balcony', 'terrace']
   EXPOSURE = ['N', 'S', 'W', 'E']
 
