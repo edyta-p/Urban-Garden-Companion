@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_104248) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_115636) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "gardens", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.float "width"
     t.float "length"
     t.string "exposure"
@@ -39,4 +39,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_104248) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "plants_gardens", force: :cascade do |t|
+    t.integer "group"
+    t.bigint "plant_id", null: false
+    t.bigint "garden_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["garden_id"], name: "index_plants_gardens_on_garden_id"
+    t.index ["plant_id"], name: "index_plants_gardens_on_plant_id"
+  end
+
+  add_foreign_key "plants_gardens", "gardens"
+  add_foreign_key "plants_gardens", "plants"
 end
