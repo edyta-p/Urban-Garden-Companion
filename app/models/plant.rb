@@ -1,0 +1,12 @@
+class Plant < ApplicationRecord
+  CLIMATE = ['Temperate', 'Cold', 'Warm']
+  EXPOSURE = ['N', 'S', 'W', 'E']
+  WATERING = [1, 2, 3]
+
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :climate, presence: true, inclusion: { in: CLIMATE }
+  validates :exposure, presence: true, inclusion: { in: EXPOSURE }
+  validates :watering, presence: true, inclusion: { in: WATERING }
+
+end
