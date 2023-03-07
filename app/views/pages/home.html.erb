@@ -1,12 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
-      <h1>Welcome on Urban Garden!</h1>
-      <p>Smart gardening device that helps people grow on their windowsill, balcony or terrace.</p>
+      <h1>Welcome to Urban Garden!</h1>
+      <p>Smart gardening device that will help you grow plants on your window ledge, balcony or terrace.</p>
       <img src="https://images.pexels.com/photos/1048035/pexels-photo-1048035.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="vh-50" alt="Image Description">
     <div class="pt-5">
-      <button type="button" class="btn btn-secondary btn-lg">Start to grow!</button>
+      <%= button_to "Start to grow now!", garden_build_index_path('build'), method: :post, class: "btn btn-secondary btn-lg" %>
     </div>
   </div>
 </div>
-<%= link_to 'Start to grow!', onboarding_path(:type) %>

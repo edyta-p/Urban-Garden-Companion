@@ -4,6 +4,7 @@ class Plant < ApplicationRecord
   CLIMATE = ['Temperate', 'Cold', 'Warm']
   EXPOSURE = ['N', 'S', 'W', 'E']
   WATERING = [1, 2, 3]
+  CATEGORY = ['Leaf plants', 'Flowers', 'Aromatics', 'Veggies', 'Fruits']
 
   validates :name, presence: true
   validates :description, presence: true
