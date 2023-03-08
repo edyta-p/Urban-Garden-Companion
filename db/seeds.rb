@@ -233,16 +233,16 @@ fruits = [
     category: "Fruit",
     description: "A low-growing, perennial plant with white or pink flowers and red, juicy fruit with small seeds on the surface.",
     climate: "Temperate",
-    Exposure: "S",
+    exposure: "S",
     watering: 2,
     plant_care: "Plant in well-draining soil and protect fruit from slugs and birds."
   },
   {
     name: "Raspberry",
     category: "Fruit",
-    Description: "A perennial plant with thorny canes that produce red, black, or yellow fruit with a hollow core.",
-    Climate: "Temperate",
-    Exposure: "S",
+    description: "A perennial plant with thorny canes that produce red, black, or yellow fruit with a hollow core.",
+    climate: "Temperate",
+    exposure: "S",
     watering: 2,
     plant_care: "Prune canes that have borne fruit and protect fruit from birds and insects."
   },
@@ -310,18 +310,18 @@ vegetables = [
   {
     name: "Radish",
     category: "Vegetable",
-    Description: "A fast-growing, cool-season root vegetable with a crispy texture and a peppery taste.",
+    description: "A fast-growing, cool-season root vegetable with a crispy texture and a peppery taste.",
     climate: "Temperate",
-    Exposure: "0",
+    exposure: "0",
     watering: 1,
     plant_care: "Plant seeds in succession every few weeks for a continuous harvest."
   },
   {
     name: "Endive",
     category: "Vegetable",
-    Description: "A leafy vegetable with a slightly bitter taste and crunchy texture, often used in salads or cooked dishes.",
+    description: "A leafy vegetable with a slightly bitter taste and crunchy texture, often used in salads or cooked dishes.",
     climate: "Cold",
-    Exposure: "E",
+    exposure: "E",
     watering: 1,
     plant_care: "To produce blanched leaves, cover the plants with a dark cloth or board a few weeks before harvest."
   },
@@ -344,11 +344,11 @@ vegetables = [
     plant_care: "Water regularly to maintain soil moisture and harvest zucchinis before they become too large."
   },
   {
-    Name: "Cucumber",
+    name: "Cucumber",
     category: "Vegetable",
-    Description: "A fast-growing vine plant with elongated, green fruit and a mild, refreshing taste.",
+    description: "A fast-growing vine plant with elongated, green fruit and a mild, refreshing taste.",
     climate: "Warm",
-    Exposure: "O",
+    exposure: "O",
     watering: 2,
     plant_care: "Provide support for the vines to climb and harvest fruit when they are still small for the best taste."
   },
