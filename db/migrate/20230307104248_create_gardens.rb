@@ -2,7 +2,7 @@ class CreateGardens < ActiveRecord::Migration[7.0]
   def change
     create_table :gardens do |t|
       t.string :name
-      t.string :type
+      t.string :category
       t.float :width
       t.float :length
       t.string :exposure
