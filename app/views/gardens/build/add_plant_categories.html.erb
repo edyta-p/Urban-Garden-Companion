@@ -1,0 +1,6 @@
+<h1>Choose the categories of the plants that interest you</h1>
+
+<%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+  <%= f.input_field :plant_categories, multiple: true, collection: Plant::CATEGORY %>
+  <%= f.submit "Submit" %>
+<% end %>
