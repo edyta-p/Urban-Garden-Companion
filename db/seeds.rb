@@ -106,7 +106,6 @@ leaf_plants = [
 
 leaf_plants.each do |plant|
   Plant.create(plant)
-
 end
 
 aromatics = [
@@ -332,7 +331,6 @@ fruits = [
 
 fruits.each do |plant|
   Plant.create(plant)
-
 end
 
 vegetables = [
