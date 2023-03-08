@@ -1,20 +1,22 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the bin/rails db:seed command (or create!d alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+#   movies = Movie.create!([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create!(name: "Luke", movie: movies.first)
 
 # // Exposition= ['N', 'S', 'E', 'W']
 # // Climate = ['Temperate", "Warm", "Cold"]
 # // watering = {"Lot": 3, "Some": 2, "Little": 1
-# // category = ['Flower', 'Aromatc', 'Fruit', 'Vegetable', 'Leaf plant']
+# // category = ['Flower', 'Aromatc', 'Fruit', 'Vegetable', 'Leaf plants']
+
+Plant.destroy_all
 
 leaf_plants = [
   {
     name: "Fern",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A delicate fern with feather-like and elegant fronds.",
     climate: "Warm",
     exposure: "E",
@@ -23,7 +25,7 @@ leaf_plants = [
   },
   {
     name: "Yucca",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A hardy plant with long, sword-shaped leaves that can grow up to several feet tall. Yuccas can also produce white or yellow flowers in the right conditions.",
     climate: "Warm",
     exposure: "E",
@@ -32,34 +34,34 @@ leaf_plants = [
   },
   {
     name: "Aucuba",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A slow-growing evergreen shrub with glossy, leathery leaves that are variegated with yellow or gold. Aucuba can also produce small, red berries in the right conditions.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Aucuba is a hardy plant that can tolerate low light and cool temperatures, but avoid exposing it to direct sunlight as it can burn the leaves.",
  },
   {
     name: "Bamboo",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A fast-growing evergreen shrub with lance-shaped dark green leaves.",
     climate: "Warm",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Prune regularly to maintain a compact shape."
   },
   {
     name: "Ivy",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A climbing plant with dark green, shiny, heart-shaped leaves.",
     climate: "Warm",
-    exposure: "O",
+    exposure: "W",
     watering: 1,
     plant_care: "Attach the ivy to a support to help with growth."
   },
   {
     name: "Agave",
-    category: "Leaf plant",
+    category: "Leaf plants",
     description: "A succulent plant with thick, pointed leaves that form a rosette.",
     climate: "Temperate",
     exposure: "S",
@@ -69,13 +71,13 @@ leaf_plants = [
 ]
 
 leaf_plants.each do |plant|
-  Plant.create(plant)
+  Plant.create!(plant)
 end
 
-aromatics = [
+Aromatics = [
   {
     name: "Basil",
-    category: "Aromatic",
+    category: "Aromatics",
     description: "Basil is an annual herb appreciated for its fresh and sweet taste.",
     climate: "Temperate",
     exposure: "S",
@@ -84,7 +86,7 @@ aromatics = [
   },
   {
     name: "Parsley",
-    category: "Aromatic",
+    category: "Aromatics",
     description: "Parsley is an annual herbaceous plant, often used as a condiment.",
     climate: "Temperate",
     exposure: "S",
@@ -93,8 +95,8 @@ aromatics = [
   },
   {
     name: "Thyme",
-    category: "Aromatic",
-    description: "Thyme is a perennial plant appreciated for its aromatic leaves.",
+    category: "Aromatics",
+    description: "Thyme is a perennial plant appreciated for its Aromatics leaves.",
     climate: "Temperate",
     exposure: "S",
     watering: 2,
@@ -102,17 +104,17 @@ aromatics = [
   },
   {
     name: "Mint",
-    category: "Aromatic",
+    category: "Aromatics",
     description: "Mint is a perennial plant appreciated for its fresh and menthol taste.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Water regularly and pinch the leaves to promote plant growth."
   },
   {
     name: "Rosemary",
-    category: "Aromatic",
-    description: "Rosemary is a perennial plant appreciated for its aromatic leaves.",
+    category: "Aromatics",
+    description: "Rosemary is a perennial plant appreciated for its Aromatics leaves.",
     climate: "Temperate",
     exposure: "S",
     watering: 2,
@@ -120,8 +122,8 @@ aromatics = [
   },
   {
     name: "Estragon",
-    category: "Aromatic",
-    description: "Estragon is a perennial plant appreciated for its aromatic leaves, which are often used in cooking.",
+    category: "Aromatics",
+    description: "Estragon is a perennial plant appreciated for its Aromatics leaves, which are often used in cooking.",
     climate: "Temperate",
     exposure: "S",
     watering: 2,
@@ -129,30 +131,30 @@ aromatics = [
   },
   {
     name: "Chives",
-    category: "Aromatic",
+    category: "Aromatics",
     description: "Chives are a popular herb in French cuisine. They have a mild, slightly oniony taste.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Chives can be grown from seeds or plants. They thrive in nutrient-rich, well-draining soil and require regular watering. Regular pruning is necessary to encourage healthy growth. Chives can be harvested by cutting the leaves at the base of the plant."
   }
 ]
-aromatics.each do |plant|
-  Plant.create(plant)
+Aromatics.each do |plant|
+  Plant.create!(plant)
 end
 flowers = [
   {
     name: "Rose",
-    category: "Flower",
+    category: "Flowers",
     description: "A perennial plant with prickly stems and fragrant flowers.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Prune at the beginning of spring and provide ample water during the growing season."
   },
   {
     name: "Sunflower",
-    category: "Flower",
+    category: "Flowers",
     description: "A plant with yellow flowers and edible stems.",
     climate: "Warm",
     exposure: "S",
@@ -161,7 +163,7 @@ flowers = [
   },
   {
     name: "Tulip",
-    category: "Flower",
+    category: "Flowers",
     description: "A spring-blooming plant with brightly colored flowers.",
     climate: "Temperate",
     exposure: "S",
@@ -170,7 +172,7 @@ flowers = [
   },
   {
     name: "Daisy",
-    category: "Flower",
+    category: "Flowers",
     description: "A small plant with white or yellow flowers and a yellow center.",
     climate: "Temperate",
     exposure: "E",
@@ -179,16 +181,16 @@ flowers = [
   },
   {
     name: "Lilac",
-    category: "Flower",
+    category: "Flowers",
     description: "A fragrant flowering plant with purple, pink, or white flowers.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Prune after flowering to shape and control growth."
   },
   {
     name: "Iris",
-    category: "Flower",
+    category: "Flowers",
     description: "A plant with sword-shaped leaves and large spectacular flowers.",
     climate: "Temperate",
     exposure: "E",
@@ -197,8 +199,8 @@ flowers = [
   },
   {
     name: "Lavender",
-    category: "Flower",
-    description: "An aromatic plant with narrow gray leaves and fragrant purple flowers.",
+    category: "Flowers",
+    description: "An Aromatics plant with narrow gray leaves and fragrant purple flowers.",
     climate: "Warm",
     exposure: "S",
     watering: 1,
@@ -206,23 +208,23 @@ flowers = [
   },
   {
     name: "Hydrangea",
-    category: "Flower",
+    category: "Flowers",
     description: "A flowering shrub with large, showy blooms in shades of pink, blue, white, and purple.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 3,
     plant_care: "Prune in late winter or early spring before new growth appears."
   }
 ]
 flowers.each do |plant|
-  Plant.create(plant)
+  Plant.create!(plant)
 end
 
 fruits = [
   {
     name: "Apple",
-    category: "Fruit",
-    description: "A sweet and crunchy fruit with red, green, or yellow skin.",
+    category: "Fruits",
+    description: "A sweet and crunchy s with red, green, or yellow skin.",
     climate: "Temperate",
     exposure: "S",
     watering: 2,
@@ -230,7 +232,7 @@ fruits = [
   },
   {
     name: "Strawberry",
-    category: "Fruit",
+    category: "Fruits",
     description: "A low-growing, perennial plant with white or pink flowers and red, juicy fruit with small seeds on the surface.",
     climate: "Temperate",
     exposure: "S",
@@ -239,7 +241,7 @@ fruits = [
   },
   {
     name: "Raspberry",
-    category: "Fruit",
+    category: "Fruits",
     description: "A perennial plant with thorny canes that produce red, black, or yellow fruit with a hollow core.",
     climate: "Temperate",
     exposure: "S",
@@ -248,7 +250,7 @@ fruits = [
   },
   {
     name: "Orange",
-    category: "Fruit",
+    category: "Fruits",
     description: "A juicy and sweet fruit with orange skin.",
     climate: "Warm",
     exposure: "S",
@@ -257,7 +259,7 @@ fruits = [
   },
   {
     name: "Grape",
-    category: "Fruit",
+    category: "Fruits",
     description: "A sweet and juicy fruit often used for making wine.",
     climate: "Temperate",
     exposure: "S",
@@ -266,7 +268,7 @@ fruits = [
   },
   {
     name: "Pear",
-    category: "Fruit",
+    category: "Fruits",
     description: "A juicy and sweet fruit with yellow or green skin.",
     climate: "Temperate",
     exposure: "N",
@@ -275,7 +277,7 @@ fruits = [
   },
   {
     name: "Kiwi",
-    category: "Fruit",
+    category: "Fruits",
     description: "A sweet and tangy fruit with brown fuzzy skin.",
     climate: "Warm",
     exposure: "S",
@@ -284,7 +286,7 @@ fruits = [
   },
   {
     name: "Peach",
-    category: "Fruit",
+    category: "Fruits",
     description: "A juicy and sweet fruit with velvety skin.",
     climate: "Temperate",
     exposure: "S",
@@ -294,31 +296,31 @@ fruits = [
 ]
 
 fruits.each do |plant|
-  Plant.create(plant)
+  Plant.create!(plant)
 end
 
 vegetables = [
   {
     name: "Tomato",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A red, yellow, or green fruit often used as a vegetable.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Stake the plants to keep them upright and water regularly to maintain soil moisture."
   },
   {
     name: "Radish",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A fast-growing, cool-season root vegetable with a crispy texture and a peppery taste.",
     climate: "Temperate",
-    exposure: "0",
+    exposure: "W",
     watering: 1,
     plant_care: "Plant seeds in succession every few weeks for a continuous harvest."
   },
   {
     name: "Endive",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A leafy vegetable with a slightly bitter taste and crunchy texture, often used in salads or cooked dishes.",
     climate: "Cold",
     exposure: "E",
@@ -327,7 +329,7 @@ vegetables = [
   },
   {
     name: "Carrot",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A sweet root often eaten raw or cooked.",
     climate: "Temperate",
     exposure: "E",
@@ -336,33 +338,33 @@ vegetables = [
   },
   {
     name: "Zucchini",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A long green vegetable often used in cooking.",
     climate: "Warm",
-    exposure: "O",
+    exposure: "W",
     watering: 1,
     plant_care: "Water regularly to maintain soil moisture and harvest zucchinis before they become too large."
   },
   {
     name: "Cucumber",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A fast-growing vine plant with elongated, green fruit and a mild, refreshing taste.",
     climate: "Warm",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Provide support for the vines to climb and harvest fruit when they are still small for the best taste."
   },
   {
     name: "Green Bean",
-    category: "Vegetable",
+    category: "Vegetables",
     description: "A green vegetable often consumed cooked or canned.",
     climate: "Temperate",
-    exposure: "O",
+    exposure: "W",
     watering: 2,
     plant_care: "Stake the plants to keep them upright and water regularly to maintain soil moisture."
   }
 ]
 
 vegetables.each do |plant|
-  Plant.create(plant)
+  Plant.create!(plant)
 end
