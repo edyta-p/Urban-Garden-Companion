@@ -8,12 +8,12 @@
 
 # // Exposition= ['N', 'S', 'E', 'W']
 # // Climate = ['Temperate", "Warm", "Cold"]
-# // watering = {"lot": 3, "some": 2, "little": 1
-# // category = ['Flower', 'aromatc', 'Fruit', 'Vegetable', 'Leaf plant']
+# // watering = {"Lot": 3, "Some": 2, "Little": 1
+# // category = ['Flower', 'Aromatc', 'Fruit', 'Vegetable', 'Leaf plant']
 
 leaf_plants = [
   {
-    name: "Boston",
+    name: "Fern",
     category: "Leaf plant",
     description: "A delicate fern with feather-like and elegant fronds.",
     climate: "Warm",
@@ -23,7 +23,7 @@ leaf_plants = [
   },
   {
     name: "Yucca",
-    type: "Leaf plant",
+    category: "Leaf plant",
     description: "A hardy plant with long, sword-shaped leaves that can grow up to several feet tall. Yuccas can also produce white or yellow flowers in the right conditions.",
     climate: "Warm",
     exposure: "E",
@@ -32,7 +32,7 @@ leaf_plants = [
   },
   {
     name: "Aucuba",
-    type: "leaf plant",
+    category: "Leaf plant",
     description: "A slow-growing evergreen shrub with glossy, leathery leaves that are variegated with yellow or gold. Aucuba can also produce small, red berries in the right conditions.",
     climate: "Temperate",
     exposure: "O",
@@ -65,42 +65,6 @@ leaf_plants = [
     exposure: "S",
     watering: 3,
     plant_care: "Avoid watering the leaves to prevent fungal diseases."
-  },
-  {
-    name: "Lavender",
-    category: "Leaf plant",
-    description: "An aromatic plant with narrow gray leaves and fragrant purple flowers.",
-    climate: "warm",
-    exposure: "S",
-    watering: 1,
-    plant_care: "Prune regularly to promote growth."
-  },
-  {
-    name: "Jasmine",
-    category: "Leaf plant",
-    description: "An evergreen shrub with white, fragrant flowers that bloom in winter.",
-    climate: "Cold",
-    exposure: "N",
-    watering: 1,
-    plant_care: "Prune after flowering to encourage new growth."
-  },
-  {
-    name: "Hydrangea",
-    category: "Leaf plant",
-    description: "A flowering shrub with large, showy blooms in shades of pink, blue, white, and purple.",
-    climate: "Temperate",
-    exposure: "O",
-    watering: 3,
-    plant_care: "Prune in late winter or early spring before new growth appears."
-  },
-  {
-    Name: "Mimosa",
-    category: "Leaf plant",
-    Description: "A shrub or tree with bright yellow, fluffy flowers that bloom in winter and spring.",
-    climate: "Cold",
-    exposure: "s",
-    watering: 2,
-    plant_care: "Protect from frost and prune after flowering to maintain shape."
   }
 ]
 
@@ -111,7 +75,7 @@ end
 aromatics = [
   {
     name: "Basil",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Basil is an annual herb appreciated for its fresh and sweet taste.",
     climate: "Temperate",
     exposure: "S",
@@ -120,7 +84,7 @@ aromatics = [
   },
   {
     name: "Parsley",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Parsley is an annual herbaceous plant, often used as a condiment.",
     climate: "Temperate",
     exposure: "S",
@@ -129,7 +93,7 @@ aromatics = [
   },
   {
     name: "Thyme",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Thyme is a perennial plant appreciated for its aromatic leaves.",
     climate: "Temperate",
     exposure: "S",
@@ -138,7 +102,7 @@ aromatics = [
   },
   {
     name: "Mint",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Mint is a perennial plant appreciated for its fresh and menthol taste.",
     climate: "Temperate",
     exposure: "O",
@@ -147,7 +111,7 @@ aromatics = [
   },
   {
     name: "Rosemary",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Rosemary is a perennial plant appreciated for its aromatic leaves.",
     climate: "Temperate",
     exposure: "S",
@@ -156,7 +120,7 @@ aromatics = [
   },
   {
     name: "Estragon",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Estragon is a perennial plant appreciated for its aromatic leaves, which are often used in cooking.",
     climate: "Temperate",
     exposure: "S",
@@ -165,7 +129,7 @@ aromatics = [
   },
   {
     name: "Chives",
-    category: "aromatic",
+    category: "Aromatic",
     description: "Chives are a popular herb in French cuisine. They have a mild, slightly oniony taste.",
     climate: "Temperate",
     exposure: "O",
@@ -179,7 +143,7 @@ end
 flowers = [
   {
     name: "Rose",
-    category: "flower",
+    category: "Flower",
     description: "A perennial plant with prickly stems and fragrant flowers.",
     climate: "Temperate",
     exposure: "O",
@@ -188,7 +152,7 @@ flowers = [
   },
   {
     name: "Sunflower",
-    category: "flower",
+    category: "Flower",
     description: "A plant with yellow flowers and edible stems.",
     climate: "Warm",
     exposure: "S",
@@ -197,7 +161,7 @@ flowers = [
   },
   {
     name: "Tulip",
-    category: "flower",
+    category: "Flower",
     description: "A spring-blooming plant with brightly colored flowers.",
     climate: "Temperate",
     exposure: "S",
@@ -206,7 +170,7 @@ flowers = [
   },
   {
     name: "Daisy",
-    category: "flower",
+    category: "Flower",
     description: "A small plant with white or yellow flowers and a yellow center.",
     climate: "Temperate",
     exposure: "E",
@@ -215,7 +179,7 @@ flowers = [
   },
   {
     name: "Lilac",
-    category: "flower",
+    category: "Flower",
     description: "A fragrant flowering plant with purple, pink, or white flowers.",
     climate: "Temperate",
     exposure: "O",
@@ -224,7 +188,7 @@ flowers = [
   },
   {
     name: "Iris",
-    category: "flower",
+    category: "Flower",
     description: "A plant with sword-shaped leaves and large spectacular flowers.",
     climate: "Temperate",
     exposure: "E",
@@ -232,13 +196,22 @@ flowers = [
     plant_care: "Divide clumps every 3-4 years to maintain plant health."
   },
   {
-    name: "marguerite",
-    category: "flower",
-    description: "A plant with large clusters of pink, blue, and white flowers.",
+    name: "Lavender",
+    category: "Flower",
+    description: "An aromatic plant with narrow gray leaves and fragrant purple flowers.",
+    climate: "Warm",
+    exposure: "S",
+    watering: 1,
+    plant_care: "Prune regularly to promote growth."
+  },
+  {
+    name: "Hydrangea",
+    category: "Flower",
+    description: "A flowering shrub with large, showy blooms in shades of pink, blue, white, and purple.",
     climate: "Temperate",
-    exposure: "E",
-    watering: 2,
-    plant_care: "Prune in late winter or early spring and water regularly during the growing season."
+    exposure: "O",
+    watering: 3,
+    plant_care: "Prune in late winter or early spring before new growth appears."
   }
 ]
 flowers.each do |plant|
@@ -248,7 +221,7 @@ end
 fruits = [
   {
     name: "Apple",
-    category: "fruit",
+    category: "Fruit",
     description: "A sweet and crunchy fruit with red, green, or yellow skin.",
     climate: "Temperate",
     exposure: "S",
@@ -274,17 +247,8 @@ fruits = [
     plant_care: "Prune canes that have borne fruit and protect fruit from birds and insects."
   },
   {
-    name: "Banana",
-    category: "fruit",
-    description: "A sweet and tropical fruit with yellow skin.",
-    climate: "Warm",
-    exposure: "S",
-    watering: 2,
-    plant_care: "Regularly fertilize to promote growth and water regularly to maintain soil moisture."
-  },
-  {
     name: "Orange",
-    category: "fruit",
+    category: "Fruit",
     description: "A juicy and sweet fruit with orange skin.",
     climate: "Warm",
     exposure: "S",
@@ -293,7 +257,7 @@ fruits = [
   },
   {
     name: "Grape",
-    category: "fruit",
+    category: "Fruit",
     description: "A sweet and juicy fruit often used for making wine.",
     climate: "Temperate",
     exposure: "S",
@@ -302,7 +266,7 @@ fruits = [
   },
   {
     name: "Pear",
-    category: "fruit",
+    category: "Fruit",
     description: "A juicy and sweet fruit with yellow or green skin.",
     climate: "Temperate",
     exposure: "N",
@@ -311,16 +275,16 @@ fruits = [
   },
   {
     name: "Kiwi",
-    category: "fruit",
+    category: "Fruit",
     description: "A sweet and tangy fruit with brown fuzzy skin.",
-    climate: "Temperate",
+    climate: "Warm",
     exposure: "S",
     watering: 1,
     plant_care: "Prune in winter to maintain the shape of the vine and water regularly during the growing season."
   },
   {
     name: "Peach",
-    category: "fruit",
+    category: "Fruit",
     description: "A juicy and sweet fruit with velvety skin.",
     climate: "Temperate",
     exposure: "S",
@@ -336,7 +300,7 @@ end
 vegetables = [
   {
     name: "Tomato",
-    category: "vegetable",
+    category: "Vegetable",
     description: "A red, yellow, or green fruit often used as a vegetable.",
     climate: "Temperate",
     exposure: "O",
@@ -354,7 +318,7 @@ vegetables = [
   },
   {
     name: "Endive",
-    category: "vegetable",
+    category: "Vegetable",
     Description: "A leafy vegetable with a slightly bitter taste and crunchy texture, often used in salads or cooked dishes.",
     climate: "Cold",
     Exposure: "E",
@@ -363,7 +327,7 @@ vegetables = [
   },
   {
     name: "Carrot",
-    category: "vegetable",
+    category: "Vegetable",
     description: "A sweet root often eaten raw or cooked.",
     climate: "Temperate",
     exposure: "E",
@@ -372,7 +336,7 @@ vegetables = [
   },
   {
     name: "Zucchini",
-    category: "vegetable",
+    category: "Vegetable",
     description: "A long green vegetable often used in cooking.",
     climate: "Warm",
     exposure: "O",
@@ -384,22 +348,13 @@ vegetables = [
     category: "Vegetable",
     Description: "A fast-growing vine plant with elongated, green fruit and a mild, refreshing taste.",
     climate: "Warm",
-    Exposure: "o",
+    Exposure: "O",
     watering: 2,
     plant_care: "Provide support for the vines to climb and harvest fruit when they are still small for the best taste."
   },
   {
-    name: "Potato",
-    category: "vegetable",
-    description: "A root often used as a vegetable or starch.",
-    climate: "Temperate ",
-    exposure: "N",
-    watering: 1,
-    plant_care: "Mound soil around plants to encourage tuber growth and water regularly to maintain soil moisture. Harvest potatoes after the plant's aerial parts die off."
-  },
-  {
     name: "Green Bean",
-    category: "vegetable",
+    category: "Vegetable",
     description: "A green vegetable often consumed cooked or canned.",
     climate: "Temperate",
     exposure: "O",
