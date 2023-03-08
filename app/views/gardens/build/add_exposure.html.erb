@@ -1,0 +1,4 @@
+<%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+  <%= f.input :exposure, collection: Garden::EXPOSURE %>
+  <%= f.submit "Pick exposure" %>
+<% end %>

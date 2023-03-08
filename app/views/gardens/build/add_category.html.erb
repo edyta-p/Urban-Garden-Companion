@@ -1,0 +1,6 @@
+<%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+  <%= f.input :category, collection: Garden::CATEGORY %>
+  <%= f.input :width %>
+  <%= f.input :length %>
+  <%= f.submit "Submit" %>
+<% end %>
