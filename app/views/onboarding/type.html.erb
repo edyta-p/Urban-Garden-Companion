@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>What is your available outdoor space?</h1>
+
+      <div class="row ml-5 mr-5  justify-content-center mt-2 ">
+        <div class="col-sm-4 w-25 h-25 ">
+          <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
+        </div>
+        <div class="col-sm-4 w-25 h-25">
+         <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
+        </div>
+        <div class="col-sm-4 w-25 h-25">
+          <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
+        </div>
+      </div>
+        <h2 class="pt-4 mt-1">What are the dimensions?</h2>
+      <form class="pt-5 mb-5">
+        <div class="row">
+        <div class="col">
+        <input type="text" class="form-control" placeholder="Width">
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" placeholder="Length">
+        </div>
+        </div>
+      </form>
+
+
+
+    <div class="h-75"style="background-color: black;">
+      <head>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <meta charset="utf-8">
+      </head>
+        <body>
+          <button id="btn1"> Length & Width</button>
+          <button id="btn2">Reset</button>
+          <div id="box" style="background:#B45F04;height:100px;width:100px;margin:6px;"></div>
+        </body>
+    </div>
+
+
+
+
+
+
+    <button type="button" class="btn btn-secondary btn-lg mb-3 mt-2"><%= link_to "Next step", next_wizard_path %></button>
+    <div class="progress mt-3">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 25%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
