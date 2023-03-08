@@ -25,7 +25,7 @@ class Gardens::BuildController < ApplicationController
 
 
   def create
-    @garden = Garden.create!
+    @garden = Garden.create!(width: 200, length: 80)
     redirect_to wizard_path(steps.first, garden_id: @garden.id)
   end
 
