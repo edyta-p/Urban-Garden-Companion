@@ -8,6 +8,7 @@ class Garden < ApplicationRecord
   validates :exposure, inclusion: { in: EXPOSURE }, if: :active_or_exposure?
   validates :length, presence: true, if: :active_or_category?
   validates :width, presence: true, if: :active_or_category?
+  validates :plant_categories, presence: true, if: :active_or_plants?
 
   def active?
     status == 'active'
@@ -21,5 +22,7 @@ class Garden < ApplicationRecord
     status.include?('exposure') || active?
   end
 
-
+  def active_or_plants?
+    status.include?('plant_categories') || active?
+  end
 end

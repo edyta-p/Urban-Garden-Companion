@@ -4,7 +4,8 @@ class PlantsController < ApplicationController
   end
 
   def categories
-    Plant::CATEGORY
+    @garden = Garden.find(params[:garden_id])
+    redirect_to garden_path(@garden)
   end
 
 end
