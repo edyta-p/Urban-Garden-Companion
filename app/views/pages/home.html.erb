@@ -1,12 +1,16 @@
-
-<div class="container">
+<div class="container pt-5 pb-5">
   <div class="row">
-    <div class="col-sm-12 text-center">
-      <h1>Welcome to Urban Garden!</h1>
+    <div class="col-sm-12">
+      <h1 class="pb-3">Welcome to Urban Garden!</h1>
       <p>Smart gardening device that will help you grow plants on your window ledge, balcony or terrace.</p>
-      <img src="https://images.pexels.com/photos/1048035/pexels-photo-1048035.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="vh-50" alt="Image Description">
+
+      
+    </div>
+    <div class="col-sm-12 text-center">
+      <%= image_tag "illustr-home_2.png" %>
+
     <div class="pt-5">
-      <%= button_to "Start to grow now!", garden_build_index_path('build'), method: :post, class: "btn btn-secondary btn-lg mb-3" %>
+      <%= button_to "Start to grow now!", garden_build_index_path('build'), method: :post, class: "btn btn-primary btn-lg mt-5" %>
     </div>
     <div class="progress-bar progress-bar-striped progress-bar-animated bg-success progress" role="progressbar" style="width: 0%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">0%</div>
 </div>

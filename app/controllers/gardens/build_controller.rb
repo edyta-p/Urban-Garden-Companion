@@ -1,7 +1,7 @@
 class Gardens::BuildController < ApplicationController
   include Wicked::Wizard
 
-  steps :add_category, :add_exposure, :add_plant_categories
+  steps :add_category, :add_geolocalisation, :add_exposure, :add_plant_categories
 
   def show
     @garden = Garden.find(params[:garden_id])
@@ -15,7 +15,7 @@ class Gardens::BuildController < ApplicationController
     params[:garden][:status] = step.to_s
     params[:garden][:status] = 'active' if step == steps.last
     @garden.update(garden_params)
-
+    # raise
     if params[:garden][:status] == 'active'
       redirect_to garden_path(@garden)
     else
