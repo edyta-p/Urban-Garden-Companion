@@ -7,7 +7,7 @@
             <%= form_with model: @garden, url: wizard_path, method: :put, class: "row" do |f| %>
               <% Plant::CATEGORY.each do |elem| %>
               <%# pardon Jojo  %>
-                  <input type="checkbox" name="garden[plant_categories][]" class='toto' value="<%= elem %>" id="<%= elem %>">
+                  <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
                   <label class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;" for="<%= elem %>"><div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;"><%= elem %></div></label>
                 <% end %>
               <%= f.submit "Submit" %>
