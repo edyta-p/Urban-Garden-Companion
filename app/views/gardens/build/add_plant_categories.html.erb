@@ -1,6 +1,32 @@
 <h1>Choose the categories of the plants that interest you</h1>
 
 <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-  <%= f.input_field :plant_categories, multiple: true, collection: Plant::CATEGORY %>
+  <%= f.input :plant_categories, as: :check_boxes, collection: Plant::CATEGORY %>
   <%= f.submit "Submit" %>
 <% end %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>What plants do you want to grow?</h1>
+
+       <div class="mt-1">
+        <div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;">Fruits</div>
+        <div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;">Vegetables</div>
+        <div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;">Aromatics</div>
+        <div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;">Flowers</div>
+        <div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;">Leaf plants</div>
+
+      </div>
+
+
+      <button type="button" class="btn btn-secondary btn-lg mt-3"><%= link_to "Previous step", previous_wizard_path  %></button>
+      <button type="button" class="btn btn-secondary btn-lg mt-3"><%= link_to "Next step", next_wizard_path %></button>
+    </div>
+  </div>
+  <div class="progress mt-3">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 75%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+</div>
+
+</div>
