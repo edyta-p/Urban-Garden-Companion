@@ -1,14 +1,18 @@
-<div class="container">
+<div class="container pt-5 pb-5">
   <div class="row">
-    <div class="col-sm-12 text-center">
-       <div class="mt-1 row-1">
-        <h1>What plants do you want to grow?</h1>
-
-            <%= form_with model: @garden, url: wizard_path, method: :put, class: "row" do |f| %>
-              <% Plant::CATEGORY.each do |elem| %>
-              <%# pardon Jojo  %>
-                  <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
-                  <label class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;" for="<%= elem %>"><div class="my-rectangular-div mt-5 pt-5 pb-5 bg-grey text-white font-weight-bold rounded" style="background-color: gray;"><%= elem %></div></label>
+    <div class="col-sm-12">
+       <div class="row">
+        <h2>What plants do you want to grow?</h2>
+            <%= form_with model: @garden, url: wizard_path, method: :put do |f| %>
+              <div class="row">
+                <% Plant::CATEGORY.each do |elem| %>
+                  <div class="col-sm-6 text-center">
+                    <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
+                    <label class="card-plants" for="<%= elem %>">
+                      <%= image_tag Plant::IMAGE_PLANT_CATEGORY[elem.to_sym], class: 'img-fluid' %>
+                      <p class="pt-3"><%= elem %></p>
+                    </label>
+                  </div>
                 <% end %>
               <%= f.submit "Submit", id:"lol" %>
             <% end %>
@@ -18,5 +22,4 @@
   <div class="progress mt-3">
   <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 75%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
 </div>
-
 </div>
