@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" data-controller="hello garden" data-action="resize@window->garden#update">
   <div class="row">
     <div class="col-sm-12 text-center">
+
 
     <h1>What is your available outdoor space?</h1>
 
@@ -19,22 +20,21 @@
         </div>
       </div>
 
-  <h2 class="pt-3">What are the dimensions?</h2>
 
-    <div class="form-group">
-      <%= f.label 'width' %>
-      <%= f.text_field :width, placeholder: 'cm' %>
-    </div>
-    <br>
-    <div class="form-group">
-      <%= f.label 'length' %>
-      <%= f.text_field :length, placeholder: 'cm' %>
-    </div>
-    <br>
-    <%= f.submit "Next step", class: 'btn btn-secondary btn-lg' %>
-    <% end %>
-  </div>
+      <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+        <%= f.input :category, collection: Garden::CATEGORY %>
+        <%= f.input :width, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
+        <%= f.input :length, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
 
-    <div class="progress mt-3">
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 25%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+        <div class="garden-container" data-garden-target="container">
+          <div class="garden" data-garden-target="garden"></div>
+        </div>
+        <%= f.submit "Next step", class: 'btn btn-secondary btn-lg mt-5' %>
+      <% end %>
+      <div class="progress mt-5 ">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 25%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+      </div>
+    </div>
+
   </div>
+</div>

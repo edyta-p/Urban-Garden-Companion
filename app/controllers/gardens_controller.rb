@@ -1,15 +1,13 @@
 class GardensController < ApplicationController
 
-  before_action :set_garden, only: [:show]
+  before_action :set_gardens, only: [:show]
 
   def show
-    @garden = Garden.find(params[:id])
   end
-
 
   private
 
-  def set_garden
+  def set_gardens
     @garden = Garden.find(params[:id])
   end
 end
