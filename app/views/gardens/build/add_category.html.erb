@@ -10,7 +10,7 @@
               <%= f.radio_button :category, elem, id: elem, class: "radio" %>
               <%= f.label elem, for: elem do %>
               <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
-              <p class="pt-3">Name</p>
+              <p class="pt-3"><%= elem %></p>
               <% end %>
               </div>
             <% end %>
