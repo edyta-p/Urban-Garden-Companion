@@ -1,29 +1,31 @@
-<div class="container" data-controller="garden" data-action="resize@window->garden#update">
+<div class="container pt-5 pb-5" data-controller="garden" data-action="resize@window->garden#update">
   <div class="row">
-    <div class="col-sm-12 text-center">
-      <h1>What is your available outdoor space?</h1>
+    <div class="col-sm-12">
+      <h2 class="pb-5">What is your available outdoor space?</h2>
 
       <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-
-        <div class="row ml-5 mr-5  justify-content-center mt-2 ">
-          <div class="row-sm-4 w-25 h-25">
+        <div class="row">
             <% Garden::CATEGORY.each do |elem| %>
+              <div class="col-4 pb-5 text-center">
               <%= f.radio_button :category, elem, id: elem, class: "radio" %>
               <%= f.label elem, for: elem do %>
               <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
-              <br></br>
+              <p class="pt-3"><%= elem %></p>
+              <% end %>
+              </div>
             <% end %>
-            <% end %>
-          </div>
         </div>
 
+      <h2 class="pb-5">What are the dimensions?</h2>
         <%= f.input :width, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
         <%= f.input :length, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
 
-        <div class="garden-container" data-garden-target="container">
+        <div class="garden-container pt-5" data-garden-target="container">
           <div class="garden" data-garden-target="garden"></div>
         </div>
-        <%= f.submit "Next step", class: 'btn btn-secondary btn-lg mt-5' %>
+        <div class="text-center">
+          <%= f.submit "Next step", class: 'btn btn-primary btn-lg mt-5', id: "lol" %>
+        </div>
       <% end %>
       <div class="progress mt-5 "id="loading-bar">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 25%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>

@@ -5,3 +5,37 @@ background-image: url("./illustr-home_2.png");
 background-size: contain;
 background-repeat: no-repeat;
 }
+
+
+#map2 {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  height: 75%;
+  width: 100%;
+}
+
+#compass2 {
+  height: 75%;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#lol{
+  background-color: #2a2a2a;
+  border: 3px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#lol:hover {
+  background-color: #fcfdfc;
+  color: black;
+  border: solid 3px black;
+}
