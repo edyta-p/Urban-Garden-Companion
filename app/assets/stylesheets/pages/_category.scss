@@ -13,6 +13,13 @@
   border: 1px solid black;
 }
 
+
+.toto{
+  display: none;
+}
+.toto:checked + label {
+  opacity: 0.5;
+
 #loading-bar {
   position: fixed;
   bottom: 0;
