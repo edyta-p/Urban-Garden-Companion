@@ -14,11 +14,12 @@
 }
 
 
-.toto{
+.check{
   display: none;
 }
-.toto:checked + label {
+.check:checked + label {
   opacity: 0.5;
+}
 
 #loading-bar {
   position: fixed;
