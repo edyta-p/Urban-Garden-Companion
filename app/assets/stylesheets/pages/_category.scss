@@ -12,3 +12,10 @@
   transition: width 2s, height 2s;
   border: 1px solid black;
 }
+
+.toto{
+  display: none;
+}
+.toto:checked + label {
+  opacity: 0.5;
+}
