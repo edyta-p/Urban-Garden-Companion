@@ -12,3 +12,16 @@
   transition: width 2s, height 2s;
   border: 1px solid black;
 }
+
+#loading-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
