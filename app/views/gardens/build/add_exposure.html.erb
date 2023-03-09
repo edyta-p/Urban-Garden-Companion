@@ -1,16 +1,16 @@
-<div data-controller="compass" id="map2" data-action="deviceorientationabsolute@window->compass#update">
-  <%# <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-    <%# <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-    <%# <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg' %>
-  <%# <% end %>
-
+<div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
+  <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+    <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
+    <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg', id: "lol" %>
+  <% end %>
+  <div  class="compass">
+    <div class="arrow"></div>
+    <div class="compass-circle"></div>
+    <div  data-compass-target= "compassCircle" class="my-point" id="compass2"></div>
+  </div>
+</div>
 <div class="container" data-controller="location" id="map2">
   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>"></script>
-
-<%= link_to 'Submit', next_wizard_path %>
-
-
-
 
 <div class="progress mt-5" id="loading-bar">
     <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 50%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">50%</div>
