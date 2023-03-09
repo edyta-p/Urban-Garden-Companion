@@ -15,7 +15,7 @@ class Gardens::BuildController < ApplicationController
     params[:garden][:status] = step.to_s
     params[:garden][:status] = 'active' if step == steps.last
     @garden.update(garden_params)
-
+    # raise
     if params[:garden][:status] == 'active'
       redirect_to garden_path(@garden)
     else

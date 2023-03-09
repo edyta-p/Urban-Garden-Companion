@@ -13,6 +13,14 @@
   border: 3px solid black;
 }
 
+
+.check{
+  display: none;
+}
+.check:checked + label {
+  opacity: 0.5;
+}
+
 #loading-bar {
   position: fixed;
   bottom: 0;
