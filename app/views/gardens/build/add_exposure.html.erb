@@ -1,18 +1,18 @@
-<div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update">
-  <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-    <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-    <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg' %>
-  <% end %>
+<div data-controller="compass" id="map2" data-action="deviceorientationabsolute@window->compass#update">
+  <%# <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+    <%# <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
+    <%# <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg' %>
+  <%# <% end %>
 
-  <div  class="compass">
+  <%# <div  class="compass">
     <div class="arrow"></div>
     <div class="compass-circle"></div>
-    <div  data-compass-target= "compassCircle" class="my-point"></div>
+    <div  data-compass-target= "compassCircle" class="my-point" id="comp"></div>
   </div>
 </div>
+ %>
 
-
-<div class="container" data-controller="location">
+<div class="container" data-controller="location" id="map2">
   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>"></script>
 
 	<h1>Your geolocalization</h1>
