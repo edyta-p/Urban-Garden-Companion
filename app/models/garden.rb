@@ -40,7 +40,4 @@ class Garden < ApplicationRecord
     status.include?('plant_categories') || active?
   end
 
-  # def plant_categories
-  #   Plant::CATEGORY
-  # end
 end

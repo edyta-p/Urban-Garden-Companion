@@ -1,8 +1,8 @@
-<%# <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update"> %>
-  <%#= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-    <%#= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-    <%#= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg' %>
-  <%# end %>
+<div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update"> %>
+  <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+    <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
+    <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg' %>
+  <% end %>
 
   <div  class="compass">
     <div class="arrow"></div>
@@ -12,7 +12,6 @@
 </div>
 
 
-<%= link_to 'Submit', next_wizard_path %>
 
 
 
