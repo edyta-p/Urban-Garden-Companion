@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CompassController from "./compass_controller"
+application.register("compass", CompassController)
+
 import GardenController from "./garden_controller"
 application.register("garden", GardenController)
 
