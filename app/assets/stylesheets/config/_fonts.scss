@@ -16,7 +16,7 @@ $headers-font: "Lexend", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 h1 {
-  font-size: 2rem;
+  font-size: 2rem !important;
   font-weight: 600;
   color: #000;
 }
@@ -25,7 +25,7 @@ h2 {
   font-weight: 600;
   color: #000;
 }
-h2 {
+h3 {
   font-size: 1rem;
   font-weight: 300;
   color: #000;
