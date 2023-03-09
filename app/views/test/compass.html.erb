@@ -2,13 +2,11 @@
 <p>Find me in app/views/test/compass.html.erb</p>
 
 
-<div data-controller="compass">
-<div  class="compass">
-     <div data-compass-target= "arrow" class="arrow"></div>
-        <div data-compass-target= "compassCircle" class="compass-circle"></div>
-        <div data-compass-target= "myPoint" class="my-point"></div>
+<div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update">
 
-</div>
-
-<button data-compass-target= "startBtn" data-action= "click-> compass#startCompass" class="start-btn">Start compass</button>
+  <div  class="compass">
+    <div class="arrow"></div>
+    <div class="compass-circle"></div>
+    <div  data-compass-target= "compassCircle" class="my-point"></div>
+  </div>
 </div>
