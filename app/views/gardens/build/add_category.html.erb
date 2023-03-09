@@ -3,19 +3,20 @@
     <div class="col-sm-12 text-center">
       <h1>What is your available outdoor space?</h1>
 
-      <div class="row ml-5 mr-5  justify-content-center mt-2 ">
-        <div class="col-sm-4 w-25 h-25 ">
-          <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
-        </div>
-        <div class="col-sm-4 w-25 h-25">
-         <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
-        </div>
-        <div class="col-sm-4 w-25 h-25">
-          <img src="https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg" class="img-fluid">
-        </div>
-      </div>
       <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-        <%= f.input :category, collection: Garden::CATEGORY %>
+
+        <div class="row ml-5 mr-5  justify-content-center mt-2 ">
+          <div class="row-sm-4 w-25 h-25">
+            <% Garden::CATEGORY.each do |elem| %>
+              <%= f.radio_button :category, elem, id: elem, class: "radio" %>
+              <%= f.label elem, for: elem do %>
+              <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
+              <br></br>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+
         <%= f.input :width, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
         <%= f.input :length, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
 
