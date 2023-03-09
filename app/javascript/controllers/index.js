@@ -4,8 +4,14 @@
 
 import { application } from "./application"
 
+import CompassController from "./compass_controller"
+application.register("compass", CompassController)
+
 import GardenController from "./garden_controller"
 application.register("garden", GardenController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import LocationController from "./location_controller"
+application.register("location", LocationController)
