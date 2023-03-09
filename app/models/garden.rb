@@ -3,9 +3,9 @@ class Garden < ApplicationRecord
 
   CATEGORY = ['window ledge', 'balcony', 'terrace']
   IMAGE_CATEGORY = {
-    'window ledge': 'https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg',
-    'balcony': 'https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg',
-    'terrace': 'https://www.minotti.com/media/immagini/27427_z_MINOTTI_TERRACE_001.jpg'
+    'window ledge': 'design/windowsill.png',
+    'balcony': 'design/balcony.png',
+    'terrace': 'design/terrace.png'
   }
 
   EXPOSURE = ['N', 'S', 'W', 'E']
