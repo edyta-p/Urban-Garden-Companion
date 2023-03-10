@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       get 'email'
       get 'list'
+      post 'send_email'
     end
     resources :build, controller: 'gardens/build'
     resources :plants, only: [:new, :create] do

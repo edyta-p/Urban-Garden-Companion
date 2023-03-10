@@ -1,9 +1,54 @@
 // Specific CSS for your home-page
 
 .background-home {
-background-image: url("./illustr-home_2.png");
-background-size: contain;
+background-image: url("design/illustr-home_2.png");
+background-size: cover;
 background-repeat: no-repeat;
+background-position: center 15vh;
+}
+
+.btn-home {
+padding-top: 50vh;
+}
+
+#map2 {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  height: 75%;
+  width: 100%;
+}
+
+#compass2 {
+  height: 75%;
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#lol{
+  background-color: #2a2a2a;
+  border: 3px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+#lol:hover {
+  background-color: #fcfdfc;
+  color: black;
+  border: solid 3px black;
+}
+
+.garden_exposure label {
+  display: none;
 }
 
 #map2 {
