@@ -1,47 +1,47 @@
+<div class="container pt-3 pb-5">
+  <h2 class="pb-3">Have a look on your garden!</h2>
+  <span>garden_id: <%= @garden.id %></span>
 
-<h2>Have a look on your garden!</h2>
-<span>garden_id: <%= @garden.id %></span>
-<div class="center">
-
-<p>-------------</p>
-<p><strong>Plants based on the category chosen by the user</strong></p>
-<% @all_possibilities.each do |pos| %>
-  <% pos.each do |f| %>
-    <%= f.name %>
-  <% end %>
-<% end %>
-
-<p>-------------</p>
-<p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate')</strong></p>
-
-  <% @after_geo.each do |plant| %>
-    <%= plant.name %>
+  <p>-------------</p>
+  <p><strong>Plants based on the category chosen by the user</strong></p>
+  <% @all_possibilities.each do |pos| %>
+    <% pos.each do |f| %>
+      <%= f.name %>
     <% end %>
-<p>-------------</p>
-<p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate') & exposure </strong></p>
-
-  <% @after_exposure.each do |plant| %>
-    <%= plant.name %>
   <% end %>
 
-<p>-------------</p>
-<p><strong> Number of plants ( based on the size of the garden )</strong></p>
-  <%= @nb_plants %>
+  <p>-------------</p>
+  <p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate')</strong></p>
 
-<p>-------------</p>
-<p><strong>!!The final plants!!</strong></p>
+    <% @after_geo.each do |plant| %>
+      <%= plant.name %>
+      <% end %>
+  <p>-------------</p>
+  <p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate') & exposure </strong></p>
 
-
-  <% if @after_exposure.count > @nb_plants %>
-    <% @var.each do |v| %>
-      <p><strong><em><%= v.name %></em></strong></p>
+    <% @after_exposure.each do |plant| %>
+      <%= plant.name %>
     <% end %>
-  <% else %>
-    <p>Not enough plants</p>
-  <% end %>
 
-<p>--------------</p>
+  <p>-------------</p>
+  <p><strong> Number of plants ( based on the size of the garden )</strong></p>
+    <%= @nb_plants %>
+
+  <p>-------------</p>
+  <p><strong>!!The final plants!!</strong></p>
+
+
+    <% if @after_exposure.count > @nb_plants %>
+      <% @var.each do |v| %>
+        <p><strong><em><%= v.name %></em></strong></p>
+      <% end %>
+    <% else %>
+      <p>Not enough plants</p>
+    <% end %>
+
+  <p>--------------</p>
+
+  <%= link_to "Receive your garden by email", email_garden_path(@garden) %>
+  <%= link_to "The details of your plants", list_garden_path(@garden) %>
+
 </div>
-
-<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
-<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
