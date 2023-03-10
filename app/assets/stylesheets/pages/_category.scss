@@ -13,10 +13,10 @@
   border: 3px solid black;
 }
 
-
 .check{
   display: none;
 }
+
 .check:checked + label {
   opacity: 0.5;
 }

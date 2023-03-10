@@ -1,9 +1,9 @@
 class Garden < ApplicationRecord
   has_many :plants_gardens
 
-  CATEGORY = ['window ledge', 'balcony', 'terrace']
+  CATEGORY = ['windowsill', 'balcony', 'terrace']
   IMAGE_CATEGORY = {
-    'window ledge': 'design/windowsill.png',
+    'windowsill': 'design/windowsill.png',
     'balcony': 'design/balcony.png',
     'terrace': 'design/terrace.png'
   }

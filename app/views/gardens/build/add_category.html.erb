@@ -10,15 +10,15 @@
               <%= f.radio_button :category, elem, id: elem, class: "radio" %>
               <%= f.label elem, for: elem do %>
               <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
-              <p class="pt-3">Name</p>
+              <p class="pt-3"><%= elem %></p>
               <% end %>
               </div>
             <% end %>
         </div>
 
       <h2 class="pb-5">What are the dimensions?</h2>
-        <%= f.input :width, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
-        <%= f.input :length, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
+        <%= f.input :width, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
+        <%= f.input :length, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
 
         <div class="garden-container pt-5" data-garden-target="container">
           <div class="garden" data-garden-target="garden"></div>

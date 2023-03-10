@@ -13,20 +13,11 @@
 <p>-------------</p>
 <p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate')</strong></p>
 
-  <% @all_possibilities.each do |f| %>
-    <% f.where(climate: 'Temperate').each do |plant| %>
-      <% @after_geo << plant %>
-    <% end %>
-  <% end %>
-
   <% @after_geo.each do |plant| %>
     <%= plant.name %>
     <% end %>
 <p>-------------</p>
 <p><strong>Plants based on the category & climate (for the moment climate is fixed as 'Temperate') & exposure </strong></p>
-  <% @after_geo.select do |elem| %>
-   <% elem.exposure == @garden.exposure ? @after_exposure << elem : @after_exposure %>
-  <% end %>
 
   <% @after_exposure.each do |plant| %>
     <%= plant.name %>
@@ -39,9 +30,16 @@
 <p>-------------</p>
 <p><strong>!!The final plants!!</strong></p>
 
-<% var = @after_exposure.sample(@nb_plants) %>
-  <% var.each do |v| %>
-    <p><strong><em><%= v.name %></em></strong></p>
+
+  <% if @after_exposure.count > @nb_plants %>
+    <% @var.each do |v| %>
+      <p><strong><em><%= v.name %></em></strong></p>
+    <% end %>
+  <% else %>
+    <p>Not enough plants</p>
   <% end %>
+
 <p>--------------</p>
+
 <%= link_to "Receive your garden by email", email_garden_path(@garden) %>
+<%= link_to "The details of your plants", list_garden_path(@garden) %>
