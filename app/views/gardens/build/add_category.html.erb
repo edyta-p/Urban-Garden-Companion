@@ -19,8 +19,8 @@
         </div>
 
       <h2 class="pb-5">What are the dimensions?</h2>
-        <%= f.input :width, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
-        <%= f.input :length, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
+        <%= f.input :length, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 200} %>
+        <%= f.input :width, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 80} %>
 
         <div class="garden-container pt-5" data-garden-target="container">
           <div class="garden" data-garden-target="garden"></div>
