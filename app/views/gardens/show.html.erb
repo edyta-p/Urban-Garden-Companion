@@ -1,6 +1,7 @@
 
 <h2>Have a look on your garden!</h2>
 <span>garden_id: <%= @garden.id %></span>
+<div class="center">
 
 <p>-------------</p>
 <p><strong>Plants based on the category chosen by the user</strong></p>
@@ -40,6 +41,7 @@
   <% end %>
 
 <p>--------------</p>
+</div>
 
-<%= link_to "Receive your garden by email", email_garden_path(@garden) %>
-<%= link_to "The details of your plants", list_garden_path(@garden) %>
+<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
+<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
