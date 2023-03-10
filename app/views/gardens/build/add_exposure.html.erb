@@ -1,8 +1,14 @@
 <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
   <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-    <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-    <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg', id: "lol" %>
-  <% end %>
+
+
+   <div class="fixed-bottom d-flex justify-content-center align-items-end pb-5">
+      <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
+      <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg ',id: "lol" %>
+      <% end %>
+    </div>
+
+
   <div  class="compass">
     <div class="arrow"></div>
     <div class="compass-circle"></div>
