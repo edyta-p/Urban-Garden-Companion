@@ -1,3 +1,4 @@
+
 <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
   <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
 
@@ -15,6 +16,13 @@
     <div  data-compass-target= "compassCircle" class="my-point" id="compass2"></div>
   </div>
 </div>
+
+
+
+
+
+
+
 <div class="container" data-controller="location" id="map2">
   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>"></script>
 

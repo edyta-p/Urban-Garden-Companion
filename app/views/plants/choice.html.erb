@@ -1,0 +1,15 @@
+<%= console %>
+<p>All the plants(based on the category)</p>
+<% @all_possibilities.each do |pos| %>
+  <% pos.each do |f| %>
+    <%= f.name %>
+  <% end %>
+<% end %>
+
+<p>-------------</p>
+<p>All the plants (taken into account the climate)</p>
+<% @all_possibilities.each do |pos| %>
+  <%= pos.select do |f| %>
+  <%= f.where(climate: 'Warm') %>
+  <% end %>
+<% end %>

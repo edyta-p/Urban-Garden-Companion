@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   resources :gardens, only: [:show] do
     member do
       get 'email'
+      get 'list'
       post 'send_email'
     end
     resources :build, controller: 'gardens/build'
     resources :plants, only: [:new, :create] do
       collection do
-        get 'categories'
+        # get 'categories'
+        # get 'choice'
       end
     end
   end
