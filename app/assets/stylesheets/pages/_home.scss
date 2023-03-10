@@ -20,7 +20,9 @@ background-repeat: no-repeat;
 #compass2 {
   height: 75%;
   width: 100%;
-  margin-top: 2%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #lol{
@@ -32,10 +34,15 @@ background-repeat: no-repeat;
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
+
 }
 
 #lol:hover {
   background-color: #fcfdfc;
   color: black;
   border: solid 3px black;
+}
+
+.garden_exposure label {
+  display: none;
 }
