@@ -1,11 +1,15 @@
 // Specific CSS for your home-page
 
 .background-home {
-background-image: url("./illustr-home_2.png");
-background-size: contain;
+background-image: url("design/illustr-home_2.png");
+background-size: cover;
 background-repeat: no-repeat;
+background-position: center 15vh;
 }
 
+.btn-home {
+padding-top: 50vh;
+}
 
 #map2 {
   height: 100%;
