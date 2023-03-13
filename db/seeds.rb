@@ -10,7 +10,7 @@
 # // Climate = ['Temperate", "Warm", "Cold"]
 # // watering = {"Lot": 3, "Some": 2, "Little": 1
 # // category = ['Flower', 'Aromatc', 'Fruit', 'Vegetable', 'Leaf plants']
-
+PlantsGarden.destroy_all
 Plant.destroy_all
 
 leaf_plants = [

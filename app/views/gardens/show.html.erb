@@ -10,7 +10,7 @@
 
 
     <p><strong>!!The final plants!!</strong></p>
-    <% @garden.plants.each do |plant| %>
+    <% @garden.plants.shuffle.each do |plant| %>
       <div class="card-plants">
           <%= plant.name %>
           <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
@@ -20,6 +20,5 @@
 
 <div class ="papa">
 <%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
-<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "mt-5" %>
 
 </div>

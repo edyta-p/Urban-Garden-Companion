@@ -3,9 +3,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="location"
 export default class extends Controller {
-  static targets = ["map", "lat", "lng"];
+  static targets = ["map", "lat", "lng", 'form'];
 
-  connect() {
+  geo() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.showPosition.bind(this));
     } else {
@@ -18,13 +18,16 @@ export default class extends Controller {
     const lng = position.coords.longitude;
     this.latTarget.innerHTML = lat;
     this.lngTarget.innerHTML = lng;
-    const map = new google.maps.Map(this.mapTarget, {
-      center: { lat, lng },
-      zoom: 8
-    });
-    const marker = new google.maps.Marker({
-      position: { lat, lng },
-      map: map
-    });
+
+    if (lat > 20 && lat < 30) {
+      this.formTarget['garden[climate]'].value = 'Warm';
+    }
+    else if (lat > 30 && lat < 60) {
+      this.formTarget['garden[climate]'].value = 'Temperate';
+    }
+    else {
+      this.formTarget['garden[climate]'].value = 'Cold';
+    }
+
   }
 }
