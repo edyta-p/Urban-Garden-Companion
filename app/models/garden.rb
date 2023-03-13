@@ -7,7 +7,6 @@ class Garden < ApplicationRecord
     'balcony': 'design/balcony.png',
     'terrace': 'design/terrace.png'
   }
-
   EXPOSURE = ['N', 'S', 'W', 'E']
 
   validates :category, inclusion: { in: CATEGORY }, if: :active_or_category?

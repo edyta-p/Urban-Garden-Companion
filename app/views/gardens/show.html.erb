@@ -41,7 +41,11 @@
   <% end %>
 
 <p>--------------</p>
+
 </div>
 
-<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
-<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
+
+<div class ="papa">
+<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
+<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "mt-5" %>
+</div>

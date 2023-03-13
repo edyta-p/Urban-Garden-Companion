@@ -1,4 +1,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>" async="true"></script>
+  <%= render "shared/loader", step: 1, class: "m-5" %>
 
 <div class="container pt-5 pb-5" data-controller="garden" data-action="resize@window->garden#update">
   <div class="row">
@@ -17,9 +18,7 @@
               </div>
             <% end %>
         </div>
-
       <h2 class="pb-5">What are the dimensions?</h2>
-
         <%= f.input :length, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 200} %>
         <%= f.input :width, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 80} %>
 
@@ -27,13 +26,13 @@
         <div class="garden-container pt-5" data-garden-target="container">
           <div class="garden" data-garden-target="garden"></div>
         </div>
-        <div class="text-center">
-          <%= f.submit "Next step", class: 'btn btn-primary btn-lg mt-5', id: "lol" %>
-        </div>
+          <div class="papa">
+          <%= f.submit "Next step",id: "lol" %>
       <% end %>
-      <div class="progress mt-5 "id="loading-bar">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 25%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
       </div>
     </div>
+
+
+
   </div>
 </div>
