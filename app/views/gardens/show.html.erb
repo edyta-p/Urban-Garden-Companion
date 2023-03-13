@@ -14,7 +14,7 @@
       <% if @after_exposure.count >= @nb_plants %>
         <% @var.each do |v1| %>
           <div class="card-plants">
-            <%= image_tag "/images/plantes/#{v1.category.chop.downcase}_#{v1.name.downcase}.png", class: 'img-fluid' %>
+            <%= image_tag "plantes/#{v1.category.chop.downcase}_#{v1.name.downcase}.png", class: 'img-fluid' %>
             <p><strong><em><%= v1.name %></em></strong></p>
           </div>
         <% end %>

@@ -26,10 +26,17 @@ class GardensController < ApplicationController
     @nb_plants = @garden.width.fdiv(@plant_size).to_i * @garden.length.fdiv(@plant_size).to_i
     # defining variable if @nb_plants =< @after_exposure
     @var = @after_exposure.sample(@nb_plants)
+
     # further calculations if @nb_plants > @after_exposure
-    @div = @nb_plants.fdiv(@after_exposure.count).to_i
-    @modulo = @nb_plants % @after_exposure.count
+    if @after_exposure.count == 0
+      @div = 0
+      @modulo = 0
+    else
+      @div = @nb_plants.fdiv(@after_exposure.count).to_i
+      @modulo = @nb_plants % @after_exposure.count
+    end
     @var_not_enough = []
+
 
     if @modulo.zero?
       my_function
