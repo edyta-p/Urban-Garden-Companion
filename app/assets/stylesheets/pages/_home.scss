@@ -38,8 +38,8 @@ padding-top: 50vh;
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-  margin: 0px;
-
+  border-radius: 15px;
+  margin-top: 70px;
 }
 
 #lol:hover {
@@ -59,4 +59,11 @@ padding-top: 50vh;
 #map {
   height: 75%;
   width: 100%;
+}
+
+.papa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
