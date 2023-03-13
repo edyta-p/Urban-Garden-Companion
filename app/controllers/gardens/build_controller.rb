@@ -20,10 +20,9 @@ class Gardens::BuildController < ApplicationController
     if garden_params[:plant_categories].present?
       while max_plant.positive?
         Plant.where(category: @garden.plant_categories, climate: @garden.climate, exposure: @garden.exposure).shuffle.each do |plant|
-          break if max_plant <= 0
-
           PlantsGarden.create!(plant: plant, garden: @garden)
           max_plant -= 1
+          break if max_plant <= 0
         end
       end
     end
