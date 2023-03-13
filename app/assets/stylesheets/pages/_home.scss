@@ -1,10 +1,10 @@
 // Specific CSS for your home-page
 
 .background-home {
-background-image: url("design/illustr-home_2.png");
+background-image: url("design/illustr-home_v2.png");
 background-size: cover;
 background-repeat: no-repeat;
-background-position: center 15vh;
+background-position: center;
 }
 
 .btn-home {
@@ -31,7 +31,7 @@ padding-top: 50vh;
 
 #lol{
   background-color: #2a2a2a;
-  border: 3px solid black;
+  border: 5px solid black;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -45,7 +45,7 @@ padding-top: 50vh;
 #lol:hover {
   background-color: #fcfdfc;
   color: black;
-  border: solid 3px black;
+  border: solid 5px black;
 }
 
 .garden_exposure label {

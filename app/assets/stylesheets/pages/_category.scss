@@ -10,16 +10,37 @@
   width: 10px;
   height: 10px;
   transition: width 2s, height 2s;
-  border: 3px solid black;
+  border: 5px solid black;
 }
+
+.picto-container {
+  // width: 10px;
+  // height: 10px;
+  position: relative;
+}
+.picto-container .picto-checked {
+  position: absolute;
+}
+
 
 .check{
   display: none;
 }
 
-.check:checked + label {
-  opacity: 0.5;
+.check + label {
+  opacity: 1;
+  // filter: brightness(100%);
+  // -webkit-filter: brightness(100%);
 }
+.check:checked + label {
+  opacity: 1;
+  // filter: brightness(50%);
+  // -webkit-filter: brightness(50%);
+  background-image: url("design/square-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 #loading-bar {
   position: fixed;
@@ -34,8 +55,8 @@
   width: 100%;
 }
 
-.card-plants {
-  background-image: url("design/square-2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  }
+// .card-plants {
+//   background-image: url("design/square-2.png");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   }

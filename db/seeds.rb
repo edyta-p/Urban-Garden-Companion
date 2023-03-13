@@ -9,7 +9,7 @@
 # // Exposition= ['N', 'S', 'E', 'W']
 # // Climate = ['Temperate", "Warm", "Cold"]
 # // watering = {"Lot": 3, "Some": 2, "Little": 1
-# // category = ['Flower', 'Aromatc', 'Fruit', 'Vegetable', 'Leaf plants']
+# // category = ['Flower', 'Aromatic', 'Fruit', 'Vegetable', 'Leaf plants']
 
 Plant.destroy_all
 
