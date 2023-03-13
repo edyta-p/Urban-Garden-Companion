@@ -1,27 +1,24 @@
-
-<div class="container pt-5 pb-5 text-center">
-  <h2>Have a look on your garden!</h2>
+<div class="container pt-3 pb-5">
+  <h2 class="pb-3">Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
-
-  <div class="col-12 ">
+  <div class="col-12">
     <p><strong> Number of plants ( based on the size of the garden )</strong></p>
       <%#= @nb_plants %>
       <%= @garden.plants.count %>
-
-
-    <p><strong>!!The final plants!!</strong></p>
-      <div class="card-plants  card-plants--small">
-    <% @plants.each do |plant| %>
-        <div class="card-plant">
-          <p class="plant-name"><%= plant.name %></p>
-          <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
-        </div>
-    <% end %>
+      <p><strong>!!The final plants!!</strong></p>
+      <div class="row">
+        <% @garden.plants.each do |plant| %>
+          <div class="col-3 text-center">
+            <div class="card-plants pb-4">
+              <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+              <%= plant.name %>
+            </div>
+          </div>
+        <% end %>
       </div>
+  <div class ="papa">
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
+    <%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "mt-5" %>
+  </div>
+  </div>
 
-
-<div class ="papa">
-<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
-<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "mt-5" %>
-
-</div>

@@ -21,11 +21,16 @@
           <% end %>
         </div>
 
-        <h2 class="pb-3">What are the dimensions?</h2>
+      <h2 class="pb-3 pt-3">What are the dimensions?</h2>
 
-        <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 0} %>
-        <%= f.input :width, label: 'Width [cm]', input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 0} %>
-
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 0} %>
+        </div>
+        <div class="col-6">
+          <%= f.input :width, label: 'Width [cm]', input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 0} %>
+        </div>
+      </div>
 
         <div class="garden-container pt-5" data-garden-target="container">
           <div class="garden" data-garden-target="garden"></div>
