@@ -1,0 +1,5 @@
+<div class="plant">
+  <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+  <p><%= @plant.name %></p>
+  <%= plant.description %>
+</div>

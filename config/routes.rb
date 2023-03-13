@@ -10,10 +10,17 @@ Rails.application.routes.draw do
     end
     resources :build, controller: 'gardens/build'
     resources :plants, only: [:new, :create] do
+
       collection do
         # get 'categories'
         # get 'choice'
       end
+    end
+  end
+
+  resources :plants, only: [] do
+    member do
+      get :plant
     end
   end
 
