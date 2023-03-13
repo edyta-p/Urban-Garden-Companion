@@ -24,7 +24,7 @@ class Gardens::BuildController < ApplicationController
 
           PlantsGarden.create!(plant: plant, garden: @garden)
           max_plant -= 1
-          end
+        end
       end
     end
 
