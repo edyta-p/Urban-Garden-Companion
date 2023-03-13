@@ -15,4 +15,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <%= link_to "Go back", garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
+
+<%= form_with url: send_email_garden_path  do |f| %>
+<%= f.email_field :email %>
+<%= f.submit %>
+<% end %>
   </body>
