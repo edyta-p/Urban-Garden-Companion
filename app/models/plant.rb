@@ -6,7 +6,7 @@ class Plant < ApplicationRecord
   WATERING = [1, 2, 3]
   CATEGORY = ['Leaf plants', 'Flowers', 'Aromatics', 'Vegetables', 'Fruits']
   IMAGE_PLANT_CATEGORY = {
-    'Leaf plants': 'plantes/plant_yucca.png',
+    'Leaf plants': 'plantes/leaf plant_yucca.png',
     'Flowers': 'plantes/flower_rose.png',
     'Aromatics': 'plantes/aromatic_basil.png',
     'Vegetables': 'plantes/vegetable_zucchini.png',
