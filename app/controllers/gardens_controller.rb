@@ -57,10 +57,10 @@ class GardensController < ApplicationController
   end
 
   def send_email
-    Prawn::Document.generate("hello.pdf") do
+    Prawn::Document.generate("UrbanGarden.pdf") do
       text "Hello World!"
     end
-    pdf_name = "hello.pdf"
+    pdf_name = "UrbanGarden.pdf"
 
     SendPdfMailer.with(email: params[:email], pdf_name:).your_pdf.deliver_later
   end

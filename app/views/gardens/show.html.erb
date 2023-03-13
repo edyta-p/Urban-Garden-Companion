@@ -1,3 +1,4 @@
+
 <div class="container pt-5 pb-5">
   <h2>Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
@@ -38,5 +39,8 @@
 </div>
 <p>--------------</p>
 
-<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
-<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "btn btn-primary mt-5" %>
+
+  <%= link_to "Receive your garden by email", email_garden_path(@garden) %>
+  <%= link_to "The details of your plants", list_garden_path(@garden) %>
+
+</div>
