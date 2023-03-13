@@ -2,6 +2,7 @@ class Gardens::BuildController < ApplicationController
   include Wicked::Wizard
 
   steps :add_category, :add_geolocalisation, :add_exposure, :add_plant_categories
+  STEP_COUNTER = 4
 
   def show
     @garden = Garden.find(params[:garden_id])

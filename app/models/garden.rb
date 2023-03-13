@@ -8,7 +8,6 @@ class Garden < ApplicationRecord
     'balcony': 'design/balcony.png',
     'terrace': 'design/terrace.png'
   }
-
   EXPOSURE = ['N', 'S', 'W', 'E']
   CLIMATE = ["Cold", "Temperate", "Warm"]
 

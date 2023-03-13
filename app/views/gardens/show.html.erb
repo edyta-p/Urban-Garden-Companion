@@ -9,8 +9,6 @@
       <%= @garden.plants.count %>
 
 
-
-    <p>-------------</p>
     <p><strong>!!The final plants!!</strong></p>
     <% @garden.plants.each do |plant| %>
       <div class="card-plants">
@@ -19,13 +17,9 @@
       </div>
     <% end %>
 
-    <%=  %>
-  </div>
-</div>
-<p>--------------</p>
-<%= console %>
 
-  <%= link_to "Receive your garden by email", email_garden_path(@garden) %>
-  <%= link_to "The details of your plants", list_garden_path(@garden) %>
+<div class ="papa">
+<%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
+<%= link_to "The details of your plants", list_garden_path(@garden), id:"lol", class: "mt-5" %>
 
 </div>
