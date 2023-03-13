@@ -19,7 +19,7 @@ class Gardens::BuildController < ApplicationController
     max_plant = (@garden.width.fdiv(plant_size).to_i * @garden.length.fdiv(plant_size).to_i)
     if garden_params[:plant_categories].present?
       while max_plant.positive?
-        Plant.where(category: @garden.plant_categories, climate: 'Temperate', exposure: @garden.exposure).shuffle.each do |plant|
+        Plant.where(category: @garden.plant_categories, climate: @garden.climate, exposure: @garden.exposure).shuffle.each do |plant|
           break if max_plant <= 0
 
           PlantsGarden.create!(plant: plant, garden: @garden)
@@ -43,6 +43,6 @@ class Gardens::BuildController < ApplicationController
   private
 
   def garden_params
-    params.require(:garden).permit(:category, :exposure, :width, :length, :status, plant_categories: [])
+    params.require(:garden).permit(:category, :exposure, :width, :length, :status, :climate, plant_categories: [])
   end
 end
