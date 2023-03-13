@@ -1,21 +1,23 @@
 
-<div class="container pt-5 pb-5">
+<div class="container pt-5 pb-5 text-center">
   <h2>Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
 
-  <div class="col-12">
+  <div class="col-12 ">
     <p><strong> Number of plants ( based on the size of the garden )</strong></p>
       <%#= @nb_plants %>
       <%= @garden.plants.count %>
 
 
     <p><strong>!!The final plants!!</strong></p>
-    <% @garden.plants.each do |plant| %>
-      <div class="card-plants">
-          <%= plant.name %>
+      <div class="card-plants  card-plants--small">
+    <% @plants.each do |plant| %>
+        <div class="card-plant">
+          <p class="plant-name"><%= plant.name %></p>
           <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
-      </div>
+        </div>
     <% end %>
+      </div>
 
 
 <div class ="papa">
