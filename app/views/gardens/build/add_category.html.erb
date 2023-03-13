@@ -1,26 +1,31 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>" async="true"></script>
   <%= render "shared/loader", step: 1, class: "m-5" %>
 
-<div class="container pt-5 pb-5" data-controller="garden" data-action="resize@window->garden#update">
+<div class="container pt-3 pb-5" data-controller="garden" data-action="resize@window->garden#update">
   <div class="row">
     <div class="col-sm-12">
-      <h2 class="pb-5">What is your available outdoor space?</h2>
+      <h2 class="pb-3">What is your available outdoor space?</h2>
 
       <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
         <div class="row">
-            <% Garden::CATEGORY.each do |elem| %>
-              <div class="col-4 pb-5 text-center">
+          <% Garden::CATEGORY.each do |elem| %>
+
+            <div class="col-4 pb-3 text-center">
+
               <%= f.radio_button :category, elem, id: elem, class: "radio" %>
               <%= f.label elem, for: elem do %>
-              <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
-              <p class="pt-3"><%= elem %></p>
+                <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
+                <p class="pt-3"><%= elem %></p>
               <% end %>
-              </div>
-            <% end %>
+            </div>
+
+          <% end %>
         </div>
-      <h2 class="pb-5">What are the dimensions?</h2>
-        <%= f.input :length, input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 200} %>
-        <%= f.input :width, input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 80} %>
+
+        <h2 class="pb-3">What are the dimensions?</h2>
+
+        <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 0} %>
+        <%= f.input :width, label: 'Width [cm]', input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 0} %
 
 
         <div class="garden-container pt-5" data-garden-target="container">
@@ -30,9 +35,5 @@
           <%= f.submit "Next step",id: "lol" %>
       <% end %>
       </div>
-    </div>
-
-
-
   </div>
 </div>

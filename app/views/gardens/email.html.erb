@@ -1,22 +1,11 @@
-
-  <div class="container mt-5">
+ <div class="container mt-5">
       <h2>Receive the recap by email:</h2>
-
-      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
-        </div>
-        <div class="papa">
-        <button type="submit" class="btn btn-primary mt-5" id="lol">Send</button>
-        </div>
-      </form>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <div class="papa">
     <%= link_to "Go back", garden_path(@garden), id:"lol",class: 'btn btn-primary btn-lg mt-5'%>
     </div>
-  </body>
+      <%= form_with url: send_email_garden_path  do |f| %>
+      <%= f.email_field :email %>
+      <%= f.submit %>
+    <% end %>
+</body>

@@ -1,5 +1,6 @@
 class Garden < ApplicationRecord
   has_many :plants_gardens
+  has_many :plants, through: :plants_gardens
 
   CATEGORY = ['windowsill', 'balcony', 'terrace']
   IMAGE_CATEGORY = {
@@ -8,6 +9,13 @@ class Garden < ApplicationRecord
     'terrace': 'design/terrace.png'
   }
   EXPOSURE = ['N', 'S', 'W', 'E']
+  CLIMATE = ["Cold", "Temperate", "Warm"]
+
+  IMAGE_CLIMATE = {
+    "Cold": 'design/cold.png',
+    "Temperate": 'design/climate.png',
+    "Warm": 'design/global-warming.png'
+  }
 
   validates :category, inclusion: { in: CATEGORY }, if: :active_or_category?
   validates :exposure, inclusion: { in: EXPOSURE }, if: :active_or_exposure?

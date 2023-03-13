@@ -137,6 +137,15 @@ Aromatics = [
     exposure: "W",
     watering: 2,
     plant_care: "Chives can be grown from seeds or plants. They thrive in nutrient-rich, well-draining soil and require regular watering. Regular pruning is necessary to encourage healthy growth. Chives can be harvested by cutting the leaves at the base of the plant."
+  },
+  { ## Cilantro
+    name: "Cilantro",
+    category: "Aromatics",
+    description: "Cilantro is a strong, distinctive-smelling herb that's often used in Mexican and Indian cooking. Cilantro has a sweet, vegetal, and pungent aroma and an earthy, herbaceous, and bright, grassy taste.",
+    climate: "Temperate",
+    exposure: "W",
+    watering: 2,
+    plant_care: "Keep the soil regularly moist, but not soaked. Good drainage is essential, as cilantro has deep roots. Use an organic fertilizer or fortify the soil with compost. Feed the herb once a month."
   }
 ]
 Aromatics.each do |plant|
@@ -214,6 +223,33 @@ flowers = [
     exposure: "W",
     watering: 3,
     plant_care: "Prune in late winter or early spring before new growth appears."
+  },
+  { ## Azalea
+    name: "Azalea",
+    category: "Flowers",
+    description: "Azaleas are perennial flowering shrubs, bearing flowers from March to June. There are thousands of cultivars to choose from, with flower colours ranging from pinks and purples to reds, oranges and yellows.",
+    climate: "Temperate",
+    exposure: "W",
+    watering: 2,
+    plant_care: "These shrubs should be planted in the spring, preferably within cool, lightly shaded sites."
+  },
+  { ## Geranium
+    name: "Geranium",
+    category: "Flowers",
+    description: "Geraniums (Pelargonium x hortorum) make popular bedding plants in the garden, but they’re also commonly grown indoors or outside in hanging baskets.",
+    climate: "Warm",
+    exposure: "W",
+    watering: 2,
+    plant_care: "The best spot for them is in a well-drained garden bed. They also grow well in pots or in hanging baskets."
+  },
+  { ## Petunia
+    name: "Petunia",
+    category: "Flowers",
+    description: "Petunias are fast-growing plants that will reach full size by late spring They are prolific bloomers, and you can find them in just about every color but true blue.",
+    climate: "Warm",
+    exposure: "W",
+    watering: 2,
+    plant_care: "The most important requirement for growing petunias successfully is a location with plenty of light.  Many varieties will thrive even if the soil is not rich and have undemanding requirements for watering."
   }
 ]
 flowers.each do |plant|
@@ -292,6 +328,24 @@ fruits = [
     exposure: "S",
     watering: 2,
     plant_care: "Prune in late winter or early spring to promote the growth of new shoots and water regularly during the growing season."
+  },
+  { ## Blueberry
+    name: "Blueberry",
+    category: "Fruits",
+    description: "Blueberries are small, round fruit that are blue or purple. They have a sweet fruity flavor.",
+    climate: "Temperate",
+    exposure: "S",
+    watering: 3,
+    plant_care: "Blueberry plants need a lot of water, but they also like well-drained, so keep the soil consistently moist but not soggy. Unfortunately, they are not drought-tolerant and will stop producing flowers and fruit if left to dry out."
+  },
+  { ## Wild strawberry
+    name: "Wild strawberry",
+    category: "Fruits",
+    description: "The lovely five-petalled flowers produce bright red fruits each with some 150 or more seeds on their outer surfaces. Slugs, mice and many other creatures enjoy the fruits and spread the seeds (strictly called achenes).",
+    climate: "Temperate",
+    exposure: "W",
+    watering: 1,
+    plant_care: "Before planting wild strawberry plants, loosen the soil in the entire planting area and mix in some compost if necessary."
   }
 ]
 
@@ -362,6 +416,42 @@ vegetables = [
     exposure: "W",
     watering: 2,
     plant_care: "Stake the plants to keep them upright and water regularly to maintain soil moisture."
+  },
+  {## Lettuce
+    name: "Lettuce",
+    category: "Vegetables",
+    description: "This crop is perfect for beginners; it’s easily sown by seed directly in the soil as soon as the ground can be worked.",
+    climate: "Temperate",
+    exposure: "W",
+    watering: 2,
+    plant_care: "To extend the lifespan and quality of plants, use shade cloth to keep lettuce cool during warm conditions."
+  },
+  {## Arugula
+    name: "Arugula",
+    category: "Vegetables",
+    description: "The leaves have a peppery, spicy flavor that grows more bitter with age. Arugula is frequently eaten raw as a salad green but can also be enjoyed cooked in a variety of dishes.",
+    climate: "Temperate",
+    exposure: "S",
+    watering: 2,
+    plant_care: "Grow arugula during the cool days of early spring or fall. It grows well in raised beds, containers, and in-ground gardens."
+  },
+  {## Spinach
+    name: "Spinach",
+    category: "Vegetables",
+    description: "Spinach, Spinacia oleracea, is an annual plant. It grows to a height of up to 30 centimeters. The leaves are alternate, simple, and ovate to triangular, either flat or curled.",
+    climate: "Cold",
+    exposure: "S",
+    watering: 2,
+    plant_care: "Water spinach to keep soil constantly moist. Use row covers to maintain cool soil and deter pests."
+  },
+  {## Bell pepper
+    name: "Bell pepper",
+    category: "Vegetables",
+    description: "Bell pepper plants are short bushes with woody stems that grow brightly colored fruits. Bell pepper may be referred to as red pepper, yellow pepper or green pepper and is believed to have originated in Central and South America.",
+    climate: "Warm",
+    exposure: "S",
+    watering: 2,
+    plant_care: "If your climate isn’t ideal for growing peppers, germinating your seeds indoors first is recommended. After one to three weeks of germination, your bell pepper seedlings should have sprouted and are ready for transplanting outside."
   }
 ]
 

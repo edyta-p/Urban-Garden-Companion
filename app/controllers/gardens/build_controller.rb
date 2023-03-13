@@ -10,13 +10,24 @@ class Gardens::BuildController < ApplicationController
     render_wizard
   end
 
-
   def update
     @garden = Garden.find(params[:garden_id])
     params[:garden][:status] = step.to_s
     params[:garden][:status] = 'active' if step == steps.last
     @garden.update(garden_params)
-    # raise
+    plant_size = 20
+    max_plant = (@garden.width.fdiv(plant_size).to_i * @garden.length.fdiv(plant_size).to_i)
+    if garden_params[:plant_categories].present?
+      while max_plant.positive?
+        Plant.where(category: @garden.plant_categories, climate: 'Temperate', exposure: @garden.exposure).shuffle.each do |plant|
+          break if max_plant <= 0
+
+          PlantsGarden.create!(plant: plant, garden: @garden)
+          max_plant -= 1
+          end
+      end
+    end
+
     if params[:garden][:status] == 'active'
       redirect_to garden_path(@garden)
     else
@@ -24,9 +35,8 @@ class Gardens::BuildController < ApplicationController
     end
   end
 
-
   def create
-    @garden = Garden.create!(width: 200, length: 80)
+    @garden = Garden.create!
     redirect_to wizard_path(steps.first, garden_id: @garden.id)
   end
 

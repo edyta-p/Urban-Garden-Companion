@@ -1,11 +1,35 @@
+
 <%= render "shared/loader", step: 2 %>
 
-<div class="container" data-controller="location" id="map2">
 
-	<h1>Your geolocalization</h1>
+<div class="container pt-3 pb-5" data-controller="location" id="map2">
+
+
+	<%# <h2>Let's find your geolocation!</h2>
+  <p class="pb-3">So we can determine your climate.</p> %>
+
+
+  <h2>In which climate are you living?</h2>
+  <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+    <div class="row">
+      <% Garden::CLIMATE.each do |elem| %>
+        <div class="col-4 pb-3 text-center">
+          <%= f.radio_button :category, elem, id: elem, class: "radio" %>
+          <%= f.label elem, for: elem do %>
+          <%= image_tag Garden::IMAGE_CLIMATE[elem.to_sym], class: 'img-fluid'%>
+          <p class="pt-3"><%= elem %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <h2>If you do not know geolocalise yourself to determine it!</h2>
 	<div id="map" data-location-target="map"></div>
   <p>latitude: <span data-location-target="lat"></span></p>
   <p>longitude: <span data-location-target="lng"></span></p>
+
+  <%# if (20..30).include?(lat)  %>
 
   <div class="d-flex justify-content-center align-items-center">
   </div>
