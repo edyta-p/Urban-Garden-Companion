@@ -1,0 +1,10 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff00ff;
+  min-height: 100px;
+  width: 100%;
+  .plant {
+    display: flex;
+  }
+}
