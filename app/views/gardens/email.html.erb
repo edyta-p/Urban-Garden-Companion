@@ -1,8 +1,6 @@
+<%= image_tag "flowers/plant-1", class: "flower", id: "one"%>
 
- 
-
-
- <div class="container pt-3 pb-5">
+<div class="container pt-3 pb-5">
  <div data-controller="share" data-share-url-value="<%= @url %>">
       <button data-action="click->share#send">Share your garden!</button>
     </div>
@@ -12,6 +10,6 @@
         <%= f.submit %>
       <% end %>
     <div class="text-center">
-    <%= link_to "Go back", garden_path(@garden), class: 'btn btn-primary mt-5'%>
-    </div>
+    <%= link_to "Go back", garden_path(@garden), class: 'btn btn-primary btn-lg'%>
+  </div>
 </div>

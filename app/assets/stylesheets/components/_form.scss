@@ -1,3 +1,14 @@
 .form-control, .form-select {
   border-color: #000 !important;
 }
+
+.flower {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  position: fixed;
+  &#one {
+    top: 0;
+    right: 0;
+  }
+}

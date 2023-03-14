@@ -1,12 +1,12 @@
 <div class="container pt-3 pb-5" data-controller="overlay">
   <h2 class="pb-3">Have a look on your garden!</h2>
-  <span>garden_id: <%= @garden.id %></span>
-  <div class="col-12">
-    <p><strong> Number of plants ( based on the size of the garden )</strong></p>
+  <%# <span>garden_id: <%= @garden.id</span> %>
+  <%# <div class="col-12"> %>
+    <%# <p><strong> Number of plants ( based on the size of the garden )</strong></p> %>
       <%#= @nb_plants %>
-      <%= @garden.plants.count %>
+      <%# <%= @garden.plants.count %>
 
-      <p><strong>!!The final plants!!</strong></p>
+      <%# <p><strong>!!The final plants!!</strong></p> %>
       <div class="row" >
         <% @garden.plants.uniq.each do |plant| %>
           <div class="col-3 text-center">
@@ -21,14 +21,14 @@
         <% end %>
       </div>
 
+  <div class ="text-center">
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary btn-lg " %>
+  </div>
    <div class="overlay-filter" data-overlay-target="filter"></div>
    <div class="overlay" data-overlay-target="overlay"></div>
   </div>
 
 
 
-  <div class ="text-center">
-    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary mt-5" %>
-  </div>
 
  </div>
