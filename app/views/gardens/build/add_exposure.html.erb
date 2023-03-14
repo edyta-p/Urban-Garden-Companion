@@ -1,22 +1,26 @@
-<%= render "shared/loader", step: 3, class:"mt-5" %>
 <div class="container pt-3 pb-5">
-  <h2 class="pb-3">Let's find your exposure!</h2>
-  <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
-    <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
-
-
-    <div class="fixed-bottom d-flex justify-content-center align-items-end pb-5">
-        <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-        <%= f.submit "Pick exposure", class: 'btn btn-secondary btn-lg ',id: "lol" %>
-        <% end %>
-
+  <div class="row">
+    <%= render "shared/loader", step: 3, class: "m-5" %>
+    <div class="col-sm-12 pt-5">
+      <h2 class="pb-3">Let's find your exposure</h2>
+      <p>To be sure to choose the right plants!</p>
+      <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
+        <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+        <div  class="compass">
+          <div class="arrow"></div>
+          <div class="compass-circle"></div>
+          <div  data-compass-target= "compassCircle" class="my-point" id="compass2"></div>
+        </div>
+        <div class="fixed-bottom d-flex justify-content-center align-items-end pt-5 pb-5">
+          <col-12>
+            <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
+          </col-12>
+          <col-12>
+            <%= f.submit "Pick exposure", class: 'btn btn-primary'%>
+          </col-12>
+          <% end %>
+        </div>
+      </div>
     </div>
-
-
-    <div  class="compass">
-      <div class="arrow"></div>
-      <div class="compass-circle"></div>
-      <div  data-compass-target= "compassCircle" class="my-point" id="compass2"></div>
-   </div>
-    </div>
+  </div>
 </div>

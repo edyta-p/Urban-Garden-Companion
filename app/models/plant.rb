@@ -20,5 +20,4 @@ class Plant < ApplicationRecord
   validates :climate, presence: true, inclusion: { in: CLIMATE }
   validates :exposure, presence: true, inclusion: { in: EXPOSURE }
   validates :watering, presence: true, inclusion: { in: WATERING }
-
 end

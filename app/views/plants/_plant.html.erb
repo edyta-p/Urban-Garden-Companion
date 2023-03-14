@@ -1,10 +1,18 @@
 <div class="plant">
+  <button data-action="click->overlay#closeOverlay" class="x-mark">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
   <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
-  <li><%= @plant.name %></li>
-  <li><%= plant.description %></li>
-  <li><%= plant.category %></li>
-  <li><%= plant.climate %></li>
-  <li><%= plant.exposure %></li>
-  <li><%= plant.watering %></li>
-  <li><%= plant.plant_care %></li>
+
+  <div class="doc-inside">
+    <li><%= @plant.name %></li>
+    <li><%= plant.description %></li>
+    <li><%= plant.category %></li>
+    <li><%= plant.climate %></li>
+    <li><%= plant.exposure %></li>
+    <li><%= plant.watering %></li>
+    <li><%= plant.plant_care %></li>
+  </div>
 </div>

@@ -1,13 +1,9 @@
 
-<%= render "shared/loader", step: 2 %>
 <div class="container pt-3 pb-5" data-controller="location" id="map2">
 
-
-	<%# <h2>Let's find your geolocation!</h2>
-  <p class="pb-3">So we can determine your climate.</p> %>
-
-
-  <h2>In which climate are you living?</h2>
+  <%= render "shared/loader", step: 2, class: "m-5" %>
+  <div class="row pt-5">
+  <h2 class="pb-3">In which climate are you living?</h2>
   <div class="d-flex justify-content-center align-items-center">
     <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
       <div class="row">
@@ -32,5 +28,8 @@
     <% end %>
   </div>
 
-
+  <div class="text-center">
+    <%= link_to 'Next step', next_wizard_path, class: "btn btn-primary mt-5"%>
+    </div>
+  </div>
 </div>
