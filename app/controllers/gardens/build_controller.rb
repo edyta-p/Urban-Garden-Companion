@@ -47,11 +47,10 @@ class Gardens::BuildController < ApplicationController
     plants = []
     max_plant.times do
       plant = Plant.where(category: @garden.plant_categories, climate: @garden.climate, exposure: @garden.exposure).sample
-      p "-" * 50
-      puts Plant.where(category: @garden.plant_categories, climate: @garden.climate, exposure: @garden.exposure).count
-      p "-" * 50
       plants << PlantsGarden.create(plant:, garden: @garden)
     end
+
+
     # Plant.import plants
 
     # if @count_plant_in_cat.count < max_plant
