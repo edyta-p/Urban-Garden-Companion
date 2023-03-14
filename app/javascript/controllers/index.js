@@ -19,9 +19,13 @@ application.register("loader", LoaderController)
 import LocationController from "./location_controller"
 application.register("location", LocationController)
 
+
+import OverlayController from "./overlay_controller"
+application.register("overlay", OverlayController)
+
 import ShareController from "./share_controller"
 application.register("share", ShareController)
 
-import PlantController from "./plant_controller"
-application.register("plant", PlantController)
+
+
 

@@ -1,5 +1,5 @@
-<div class="container pt-3 pb-5" data-controller="plant">
-  <%= render "shared/loader", step: 4, class: "m-5" %>
+<div class="container pt-3 pb-5" data-controller="overlay">
+  <%= render "shared/loader", step: 4, class: "loader-div" %>
   <h2 class="pb-3">Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
   <div class="col-12">
@@ -11,7 +11,7 @@
       <div class="row" >
         <% @garden.plants.shuffle.each do |plant| %>
           <div class="col-3 text-center">
-            <div data-action="click->plant#togglePlant" data-plant-id="<%= plant.id %>">
+            <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
               <div class="card-plants pb-4">
                 <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
                 <%= plant.name %>
@@ -21,8 +21,11 @@
         <% end %>
       </div>
 
+   <div class="overlay-filter" data-overlay-target="filter"></div>
+   <div class="overlay" data-overlay-target="overlay"></div>
+  </div>
 
-   <div class="results" data-plant-target="results"></div>
+
 
   <div class ="text-center">
     <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary mt-5" %>

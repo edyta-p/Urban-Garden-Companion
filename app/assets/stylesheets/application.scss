@@ -12,3 +12,21 @@
 @import "pages/index";
 @import "components/radio";
 @import "pages/home";
+
+body {
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.w-6, .h-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.x-mark {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
