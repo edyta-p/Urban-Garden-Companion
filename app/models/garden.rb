@@ -4,17 +4,17 @@ class Garden < ApplicationRecord
 
   CATEGORY = ['windowsill', 'balcony', 'terrace']
   IMAGE_CATEGORY = {
-    'windowsill': 'design/windowsill.png',
-    'balcony': 'design/balcony.png',
-    'terrace': 'design/terrace.png'
+    'windowsill': 'design/windowsill-2.png',
+    'balcony': 'design/balcony-2.png',
+    'terrace': 'design/terrace-2.png'
   }
   EXPOSURE = ['N', 'S', 'W', 'E']
   CLIMATE = ["Cold", "Temperate", "Warm"]
 
   IMAGE_CLIMATE = {
-    "Cold": 'design/climate-cold-2.png',
-    "Temperate": 'design/climate-temperate-2.png',
-    "Warm": 'design/climate-warm-2.png'
+    "Cold": 'design/climate-cold-3.png',
+    "Temperate": 'design/climate-temperate-3.png',
+    "Warm": 'design/climate-warm-3.png'
   }
 
   validates :category, inclusion: { in: CATEGORY }, if: :active_or_category?
