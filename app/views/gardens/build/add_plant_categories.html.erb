@@ -1,6 +1,7 @@
 <div class="container pt-3 pb-5">
   <div class="row">
-    <div class="col-12">
+    <%= render "shared/loader", step: 4, class: "m-5" %>
+    <div class="col-sm-12 pt-5">
        <div class="row">
         <h2 class="pb-3">What plants do you want to grow?</h2>
             <%= form_with model: @garden, url: wizard_path, method: :put do |f| %>
@@ -8,18 +9,17 @@
                 <% Plant::CATEGORY.each do |elem| %>
                   <div class="col-6 text-center">
                     <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
-                    <label class="card-plants" for="<%= elem %>">
+         <label class="" for="<%= elem %>">
                       <%= image_tag Plant::IMAGE_PLANT_CATEGORY[elem.to_sym], class: 'img-fluid' %>
                       <p class="pt-3"><%= elem %></p>
                     </label>
                   </div>
                 <% end %>
-              <%= f.submit "submit", id:"lol" %>
+                <div class="text-center">
+              <%= f.submit "Generate your garden!", class:"btn btn-primary"%>
             <% end %>
+            </div>
       </div>
     </div>
   </div>
-  <div class="progress mt-3">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success bg-success" role="progressbar" style="width: 75%; border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-</div>
 </div>

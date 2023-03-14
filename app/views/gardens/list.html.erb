@@ -1,2 +1,12 @@
 <h1>List of your plants</h1>
+
+
+<% @garden.plants.each do |plant| %>
+  <p>Plant name: <%= plant.name %></p>
+  <p>Description: <%= plant.description %></p>
+  <p>Plant care: <%= plant.plant_care %></p>
+  <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+<% end %>
+
+
 <%= link_to "Go back", garden_path(@garden) %>

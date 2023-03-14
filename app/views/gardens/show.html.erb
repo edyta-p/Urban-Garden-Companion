@@ -1,46 +1,33 @@
-
-<div class="container pt-5 pb-5">
-  <h2>Have a look on your garden!</h2>
+<div class="container pt-3 pb-5" data-controller="plant">
+  <%= render "shared/loader", step: 4, class: "m-5" %>
+  <h2 class="pb-3">Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
-
   <div class="col-12">
     <p><strong> Number of plants ( based on the size of the garden )</strong></p>
-      <%= @nb_plants %>
+      <%#= @nb_plants %>
+      <%= @garden.plants.count %>
 
-    <p>-------------</p>
-    <p><strong>!!The final plants!!</strong></p>
-
-
-      <% if @after_exposure.count >= @nb_plants %>
-        <% @var.each do |v1| %>
-          <div class="card-plants">
-            <%= image_tag "/images/plantes/#{v1.category.chop.downcase}_#{v1.name.downcase}.png", class: 'img-fluid' %>
-            <p><strong><em><%= v1.name %></em></strong></p>
+      <p><strong>!!The final plants!!</strong></p>
+      <div class="row" >
+        <% @garden.plants.shuffle.each do |plant| %>
+          <div class="col-3 text-center">
+            <div data-action="click->plant#togglePlant" data-plant-id="<%= plant.id %>">
+              <div class="card-plants pb-4">
+                <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+                <%= plant.name %>
+              </div>
+            </div>
           </div>
         <% end %>
+      </div>
 
-        <% @var.each do |v1| %>
-          <p><strong><em><%= v1.name %></em></strong> occurs <%= @var.count(v1) %> time</p>
-        <% end %>
-      <% else %>
-        <% @var_not_enough.each do |v2| %>
-          <div class="card-plants">
-            <%= image_tag "plantes/#{v2.category.chop.downcase}_#{v2.name.downcase}.png", class: 'img-fluid' %>
-            <p><strong><em><%= v2.name %></em></strong></p>
-          </div>
-        <% end %>
 
-          <% @plants.each do |plant| %>
-            <p><span><%="#{plant.name}"%> occurs </span><%= @all_instances.count(plant) %> <span>times</span></p>
-          <% end %>
-      <% end %>
+   <div class="results" data-plant-target="results"></div>
 
+  <div class ="text-center">
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary mt-5" %>
+    <%= link_to "The details of your plants", list_garden_path(@garden), class: "btn btn-primary mt-5" %>
   </div>
-</div>
-<p>--------------</p>
 
+ </div>
 
-  <%= link_to "sign up to find out your information", email_garden_path(@garden) %>
-  <%= link_to "The details of your plants", list_garden_path(@garden) %>
-
-</div>
