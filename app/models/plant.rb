@@ -1,6 +1,8 @@
 class Plant < ApplicationRecord
   has_many :plants_gardens
 
+  PLANT_SIZE = 20
+
   CLIMATE = ['Temperate', 'Cold', 'Warm']
   EXPOSURE = ['N', 'S', 'W', 'E']
   WATERING = [1, 2, 3]
