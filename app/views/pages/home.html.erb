@@ -1,12 +1,21 @@
 <div class="background-home vh-100">
   <div class="container pt-3 pb-5">
     <div class="row">
+      <div class="col-3">
+        <%= image_tag "design/logo-urban-garden-app.png", class: 'img-fluid' %>
+      </div>
+      <div class="col-9">
+        <h1>Urban Garden</h1>
+        <h3 class="pb-2">Small seeds, greener cities!</h3>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-8">
-        <h1 class="pb-3">Urban Garden</h1>
         <p>Smart gardening device that will help you grow plants on your windowsill, balcony or terrace.</p>
       </div>
-      <div class="col-12 text-center pt-5 pb-5 fixed-bottom">
-        <%= button_to "Start to grow now!", garden_build_index_path('build'), method: :post, class: "btn btn-primary btn-lg mt-5 btn-home", id:"lol" %>
+    </div>
+      <div class="col-12 text-center pb-5 fixed-bottom">
+        <%= button_to "Start to grow now!", garden_build_index_path('build'), method: :post, class: "btn btn-primary btn-lg"%>
       </div>
   </div>
 </div>

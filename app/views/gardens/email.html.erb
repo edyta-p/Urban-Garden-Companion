@@ -1,11 +1,11 @@
- <div class="container mt-5">
+ <div class="container pt-3 pb-5">
       <h2>Receive the recap by email:</h2>
-
-    <div class="papa">
-    <%= link_to "Go back", garden_path(@garden), id:"lol",class: 'btn btn-primary btn-lg mt-5'%>
-    </div>
       <%= form_with url: send_email_garden_path  do |f| %>
-      <%= f.email_field :email %>
-      <%= f.submit %>
-    <% end %>
+        <%= f.email_field :email %>
+        <%= f.submit %>
+      <% end %>
+    <div class="text-center">
+    <%= link_to "Go back", garden_path(@garden), class: 'btn btn-primary mt-5'%>
+    </div>
+
 </body>
