@@ -1,4 +1,11 @@
+
+ 
+
+
  <div class="container pt-3 pb-5">
+ <div data-controller="share" data-share-url-value="<%= @url %>">
+      <button data-action="click->share#send">Share your garden!</button>
+    </div>
       <h2>Receive the recap by email:</h2>
       <%= form_with url: send_email_garden_path  do |f| %>
         <%= f.email_field :email %>
@@ -7,5 +14,4 @@
     <div class="text-center">
     <%= link_to "Go back", garden_path(@garden), class: 'btn btn-primary mt-5'%>
     </div>
-
-</body>
+</div>

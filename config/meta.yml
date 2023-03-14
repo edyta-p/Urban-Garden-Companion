@@ -1,0 +1,5 @@
+meta_name: "garden name"
+meta_title: "garden name - Urban Garden"
+meta_description: "Relevant description"
+meta_image: "favicon-96x96.png" # should exist in `app/assets/images/`
+twitter_account: "@your_twitter_account"   # required for Twitter Cards
