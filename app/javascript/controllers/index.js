@@ -15,3 +15,6 @@ application.register("hello", HelloController)
 
 import LocationController from "./location_controller"
 application.register("location", LocationController)
+
+import ShareController from "./share_controller"
+application.register("share", ShareController)

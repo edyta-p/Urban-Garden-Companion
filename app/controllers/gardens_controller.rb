@@ -1,5 +1,5 @@
 class GardensController < ApplicationController
-  before_action :set_gardens, only: [:show, :send_email, :email, :list]
+  before_action :set_garden, only: [:show, :send_email, :email, :list]
 
   def show
     @all_possibilities = []
@@ -54,15 +54,12 @@ class GardensController < ApplicationController
   end
 
   def email
+    @url = garden_path(@garden)
   end
 
   def send_email
-    Prawn::Document.generate("UrbanGarden.pdf") do
-      text "Hello World!"
-    end
-    pdf_name = "UrbanGarden.pdf"
 
-    SendPdfMailer.with(email: params[:email], pdf_name:).your_pdf.deliver_later
+    SendPdfMailer.with(email: params[:email], garden: @garden).your_garden.deliver_later
   end
 
   private
@@ -75,7 +72,7 @@ class GardensController < ApplicationController
     end
   end
 
-  def set_gardens
+  def set_garden
     @garden = Garden.find(params[:id])
   end
 end
