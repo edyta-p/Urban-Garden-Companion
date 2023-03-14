@@ -8,12 +8,13 @@
 
       <p><strong>!!The final plants!!</strong></p>
       <div class="row" >
-        <% @garden.plants.shuffle.each do |plant| %>
+        <% @garden.plants.uniq.each do |plant| %>
           <div class="col-3 text-center">
             <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
               <div class="card-plants pb-4">
                 <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
                 <%= plant.name %>
+                <p>Quantity: <%= @garden.plants.where(id: plant).count %></p>
               </div>
             </div>
           </div>
