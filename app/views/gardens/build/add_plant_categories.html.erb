@@ -1,7 +1,7 @@
-  <%= render "shared/loader", step: 4 %>
-<div class="container pt-5 pb-5">
+<div class="container pt-3 pb-5">
   <div class="row">
-    <div class="col-12">
+    <%= render "shared/loader", step: 4, class: "m-5" %>
+    <div class="col-sm-12 pt-5">
        <div class="row">
         <h2 class="pb-3">What plants do you want to grow?</h2>
             <%= form_with model: @garden, url: wizard_path, method: :put do |f| %>
@@ -15,12 +15,11 @@
                     </label>
                   </div>
                 <% end %>
-                <div class="papa">
-              <%= f.submit "submit", id:"lol" %>
+                <div class="text-center">
+              <%= f.submit "Generate your garden!", class:"btn btn-primary"%>
             <% end %>
             </div>
       </div>
     </div>
   </div>
-
 </div>
