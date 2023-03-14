@@ -3,6 +3,11 @@ class PlantsController < ApplicationController
     @plant = Plant.new
   end
 
+  def plant
+    @plant = Plant.find(params[:id])
+    render partial: "plant", locals: { plant: @plant }
+  end
+
   # def categories
   #   @garden = Garden.find(params[:garden_id])
   #   redirect_to garden_path(@garden)

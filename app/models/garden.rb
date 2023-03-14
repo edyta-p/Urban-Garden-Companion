@@ -22,6 +22,7 @@ class Garden < ApplicationRecord
   validates :length, presence: true, if: :active_or_length?
   validates :width, presence: true, if: :active_or_width?
   validates :plant_categories, presence: true, if: :active_or_plants?
+  validates :climate, inclusion: { in: CLIMATE }, if: :active_or_climate?
 
   def active?
     status == 'active'
@@ -45,6 +46,10 @@ class Garden < ApplicationRecord
 
   def active_or_plants?
     status.include?('plant_categories') || active?
+  end
+
+  def active_or_climate?
+    status.include?('climate') || active?
   end
 
 end
