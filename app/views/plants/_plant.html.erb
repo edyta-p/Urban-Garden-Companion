@@ -7,12 +7,12 @@
   <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
 
   <div class="doc-inside">
-    <li><%= @plant.name %></li>
-    <li><%= plant.description %></li>
-    <li><%= plant.category %></li>
-    <li><%= plant.climate %></li>
-    <li><%= plant.exposure %></li>
-    <li><%= plant.watering %></li>
-    <li><%= plant.plant_care %></li>
+    <li>Name: <%= @plant.name %></li>
+    <li>Climate:  <%= plant.climate %></li>
+    <li>Exposure: <%= plant.exposure %></li>
+    <li>Watering:  <%= plant.watering %></li>
+    <li>Description:   <%= plant.description %></li>
+    <li>Plant care:    <%= plant.plant_care %></li>
+
   </div>
 </div>
