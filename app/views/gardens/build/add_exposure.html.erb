@@ -2,8 +2,9 @@
   <div class="row">
     <%= render "shared/loader", step: 3, class: "m-5" %>
     <div class="col-sm-12 pt-5">
-      <h2 class="pb-3">Let's find your exposure</h2>
-      <p>To be sure to choose the right plants!</p>
+      <h2 class="pb-3">Let's find exposure of your future garden</h2>
+      <p>Place yourself in front of your <strong><%= @garden.category %></strong></p>
+      <p>So we can choose the right plants!</p>
       <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
         <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
         <div  class="compass">
