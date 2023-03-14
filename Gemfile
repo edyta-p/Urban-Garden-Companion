@@ -84,3 +84,5 @@ gem "awesome_print", "~> 1.9"
 gem "prawn", "~> 2.4"
 
 gem "matrix", "~> 0.4.2"
+
+gem "activerecord-import", "~> 1.4"
