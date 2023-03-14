@@ -1,5 +1,4 @@
 <div class="container pt-3 pb-5" data-controller="overlay">
-  <%= render "shared/loader", step: 4, class: "loader-div" %>
   <h2 class="pb-3">Have a look on your garden!</h2>
   <span>garden_id: <%= @garden.id %></span>
   <div class="col-12">
@@ -29,9 +28,6 @@
 
   <div class ="text-center">
     <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary mt-5" %>
-    <%= link_to "The details of your plants", list_garden_path(@garden), class: "btn btn-primary mt-5" %>
   </div>
 
  </div>
-
-
