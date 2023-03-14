@@ -21,9 +21,11 @@
         <% end %>
       </div>
 
+
    <div class="results" data-plant-target="results"></div>
-  </div>
-  <div class ="papa">
-    <%= link_to "Receive your garden by email", email_garden_path(@garden), id:"lol", class: "mt-5" %>
+
+  <div class ="text-center">
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary mt-5" %>
+    <%= link_to "The details of your plants", list_garden_path(@garden), class: "btn btn-primary mt-5" %>
   </div>
  </div>
