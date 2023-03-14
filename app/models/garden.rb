@@ -12,9 +12,9 @@ class Garden < ApplicationRecord
   CLIMATE = ["Cold", "Temperate", "Warm"]
 
   IMAGE_CLIMATE = {
-    "Cold": 'design/cold.png',
-    "Temperate": 'design/climate.png',
-    "Warm": 'design/global-warming.png'
+    "Cold": 'design/climate-cold-2.png',
+    "Temperate": 'design/climate-temperate-2.png',
+    "Warm": 'design/climate-warm-2.png'
   }
 
   validates :category, inclusion: { in: CATEGORY }, if: :active_or_category?
