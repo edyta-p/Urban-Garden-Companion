@@ -37,7 +37,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -61,6 +61,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "localhost:3000", protocol: "http" }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
