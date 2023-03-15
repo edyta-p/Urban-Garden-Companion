@@ -1,11 +1,8 @@
 
-<div class="container pt-3 pb-5" data-controller="location" id="map2">
-
+<div class="container pt-3 pb-5" data-controller="location">
   <%= render "shared/loader", step: 2, class: "m-5" %>
-  <div class="row pt-5">
-
-  <h2 class="pb-3">In which climate are you living?</h2>
-  <div class="d-flex justify-content-center align-items-center">
+  <div class="pt-5">
+    <h2 class="pb-3">In which climate are you living?</h2>
     <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
       <div class="row">
         <% Garden::CLIMATE.each do |elem| %>
@@ -18,17 +15,14 @@
           </div>
         <% end %>
       </div>
-
-
-        <h2>If you do not know use geolocalisation to determine it!</h2>
-        <p><span data-location-target="lat" class='d-none'></span></p>
-        <p><span data-location-target="lng" class='d-none'></span></p>
-
-      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home' %>
-      <%= f.submit 'Submit', id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home',data: { location_target: "button"}, disabled: true %>
-      
+    <div class="text-center pt-4">
+      <p>If you don't know your climate, use geolocation to determine it:</p>
+      <%= button_tag "OK, I want to geolocate", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'btn btn-primary' %>
+      <span data-location-target="lat" class='d-none'></span><span data-location-target="lng" class='d-none'></span>
+    </div>
+    <div class="text-center">
+      <%= f.submit 'Next step', class: 'btn btn-primary btn-lg mt-5',data: { location_target: "button"}, disabled: true %>
+    </div>
     <% end %>
   </div>
- </div>
-
 </div>

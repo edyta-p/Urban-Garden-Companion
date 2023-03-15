@@ -5,7 +5,7 @@
        <div class="row">
         <h2 class="pb-3">What plants do you want to grow?</h2>
             <%= form_with model: @garden, url: wizard_path, method: :put do |f| %>
-              <div class="row">
+              <div class="row choose-plants">
                 <% Plant::CATEGORY.each do |elem| %>
                   <div class="col-6 text-center">
                     <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
