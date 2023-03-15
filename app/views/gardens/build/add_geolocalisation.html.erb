@@ -15,14 +15,16 @@
           </div>
         <% end %>
       </div>
-    <div class="text-center pt-4">
-      <p>If you don't know your climate, use geolocation to determine it:</p>
-      <%= button_tag "OK, I want to geolocate", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'btn btn-primary' %>
-      <span data-location-target="lat" class='d-none'></span><span data-location-target="lng" class='d-none'></span>
-    </div>
-    <div class="text-center">
-      <%= f.submit 'Next step', class: 'btn btn-primary btn-lg mt-5',data: { location_target: "button"}, disabled: true %>
-    </div>
+
+
+        <h2>If you do not know use geolocalisation to determine it!</h2>
+        <p><span data-location-target="lat" class='d-none'></span></p>
+        <p><span data-location-target="lng" class='d-none'></span></p>
+
+      <div class="button-middle">
+      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button' %>
+      <%= f.submit 'Submit', class: 'button mt-5',data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
     <% end %>
+    </div>
   </div>
 </div>
