@@ -9,7 +9,7 @@
                 <% Plant::CATEGORY.each do |elem| %>
                   <div class="col-6 text-center">
                     <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
-         <label class="" for="<%= elem %>">
+                    <label class="" for="<%= elem %>">
                       <%= image_tag Plant::IMAGE_PLANT_CATEGORY[elem.to_sym], class: 'img-fluid' %>
                       <p class="pt-3"><%= elem %></p>
                     </label>
