@@ -10,7 +10,7 @@ class GardensController < ApplicationController
   end
 
   def email
-    @url = garden_path(@garden)
+    @url = garden_path(@garden, received: true)
   end
 
   def send_email
