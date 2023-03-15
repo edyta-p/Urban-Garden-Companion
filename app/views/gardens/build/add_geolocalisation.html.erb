@@ -24,10 +24,11 @@
         <p><span data-location-target="lat" class='d-none'></span></p>
         <p><span data-location-target="lng" class='d-none'></span></p>
 
-      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home' %>
-      <%= f.submit 'Submit', id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home',data: { location_target: "button"}, disabled: true %>
-      
+      <div class="button-middle">
+      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button' %>
+      <%= f.submit 'Submit', class: 'button mt-5',data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
     <% end %>
+    </div>
   </div>
  </div>
 
