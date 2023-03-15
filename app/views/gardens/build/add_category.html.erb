@@ -6,13 +6,13 @@
     <div class="col-sm-12 pt-5">
       <h2 class="pb-3">What is your available outdoor space?</h2>
 
-      <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
+      <%= simple_form_for @garden, url: wizard_path, method: :put, data: {garden_target: 'form'} do |f| %>
         <div class="row">
           <% Garden::CATEGORY.each do |elem| %>
 
             <div class="col-4 pb-3 text-center">
 
-              <%= f.radio_button :category, elem, id: elem, class: "radio" %>
+              <%= f.radio_button :category, elem, id: elem, class: "radio", data: { garden_target: "category", action: "input->garden#update"} %>
               <%= f.label elem, for: elem do %>
                 <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
                 <p class="pt-3"><%= elem %></p>
@@ -38,6 +38,7 @@
 
           <div class="text-center pt-2">
             <%= f.submit "Next step",class: "btn btn-primary btn-lg" %>
+
             <% end %>
           </div>
     </div>
