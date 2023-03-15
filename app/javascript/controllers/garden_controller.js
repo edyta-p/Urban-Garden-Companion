@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['container', 'garden', 'inputWidth', 'inputHeight', 'form', "button"]
+  static targets = ['container', 'garden', 'inputWidth', 'inputHeight', 'form', 'button']
 
   connect() {
     this.update()
