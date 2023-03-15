@@ -24,7 +24,9 @@
   transition: filter 0.3s ease-in-out;
   backdrop-filter: blur(5px);
   &.active {
+    filter: blur(5px);
     z-index: 1;
+    border: 1px solid black;
   }
 }
 
@@ -40,4 +42,10 @@
 .image-model{
   display: inline;
   width: 13%;
+}
+
+.plant-overlay{
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 2rem;
 }
