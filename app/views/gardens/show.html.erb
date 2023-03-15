@@ -1,5 +1,5 @@
 <div class="container pt-3 pb-5" data-controller="overlay">
-  <h2 class="pb-3">Have a look on your garden!</h2>
+  <h2>Have a look on your garden!</h2>
   <%# <span>garden_id: <%= @garden.id</span> %>
   <%# <div class="col-12"> %>
     <%# <p><strong> Number of plants ( based on the size of the garden )</strong></p> %>
@@ -9,23 +9,29 @@
       <%# <p><strong>!!The final plants!!</strong></p> %>
       <div class="row" >
         <% @garden.plants.uniq.each do |plant| %>
-          <div class="col-3 text-center">
+          <div class="text-center">
             <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
-              <div class="card-plants pb-4">
+
+              <div class="card-product mt-3">
                 <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+              <div class="card-product-infos">
                 <%= plant.name %>
                 <p>Quantity: <%= @garden.plants.where(id: plant).count %></p>
               </div>
             </div>
+            </div>
+
           </div>
         <% end %>
       </div>
 
   <div class ="text-center">
-    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary btn-lg " %>
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "btn btn-primary btn-lg mt-4 " %>
   </div>
    <div class="overlay-filter" data-overlay-target="filter"></div>
-   <div class="overlay" data-overlay-target="overlay"></div>
+   <div class="overlay" data-overlay-target="overlay">
+
+   </div>
   </div>
  </div>
  <%= console %>
