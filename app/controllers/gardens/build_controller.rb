@@ -43,6 +43,8 @@ class Gardens::BuildController < ApplicationController
   def add_plants
     return unless garden_params[:plant_categories].present?
 
+    @garden.plants.destroy_all if @garden.plants.any?
+
     max_plant = (@garden.width.fdiv(Plant::PLANT_SIZE).to_i * @garden.length.fdiv(Plant::PLANT_SIZE).to_i)
     plants = []
     max_plant.times do
