@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['container', 'garden', 'inputWidth', 'inputHeight']
+  static targets = ['container', 'garden', 'inputWidth', 'inputHeight', 'form', "button"]
 
   connect() {
     this.update()
@@ -10,6 +10,8 @@ export default class extends Controller {
     console.log('Hello!', this.gardenTarget);
     console.log('Hello!', this.inputWidthTarget);
     console.log('Hello!', this.inputHeightTarget);
+
+    window.toto = this
   }
 
   calcSizeGarden() {
@@ -30,5 +32,17 @@ export default class extends Controller {
     const sizes = this.calcSizeGarden()
     this.gardenTarget.style.width = `${sizes.width}px`;
     this.gardenTarget.style.height = `${sizes.height}px`;
+    this.checkValues();
+  }
+
+  checkValues() {
+    console.log("toti");
+    console.log(this.formTarget['garden[category]'].value);
+    console.log(this.inputWidthTarget.value);
+    if (this.inputWidthTarget.value > 0 && this.inputHeightTarget.value > 0 && ["balcony", "windowsill", "terrace"].includes(this.formTarget['garden[category]'].value)) {
+      this.buttonTarget.disabled = false
+    } else {
+      this.buttonTarget.disabled = true
+    }
   }
 }

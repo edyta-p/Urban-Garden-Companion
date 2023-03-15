@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="location"
 export default class extends Controller {
-  static targets = ["map", "lat", "lng", 'form'];
+  static targets = ["map", "lat", "lng", "location","climate","form", 'button' ];
 
   geo() {
     if (navigator.geolocation) {
@@ -28,6 +28,19 @@ export default class extends Controller {
     else {
       this.formTarget['garden[climate]'].value = 'Cold';
     }
+    this.checkValues()
+  }
+  update() {
+    this.checkValues()
+  }
 
+  checkValues() {
+    console.log("toti");
+    console.log(this.formTarget['garden[climate]'].value);
+    if  (["Cold", "Temperate", "Warm"].includes(this.formTarget['garden[climate]'].value)) {
+      this.buttonTarget.disabled = false
+    } else {
+      this.buttonTarget.disabled = true
+    }
   }
 }
