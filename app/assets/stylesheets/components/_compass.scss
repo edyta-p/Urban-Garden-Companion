@@ -30,7 +30,7 @@ body {
 .compass > .my-point {
   position: absolute;
   width: 90%;
-  height: 90%;
+  height: 30%;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -55,7 +55,6 @@ body {
 }
 
 #compass2 {
-  height: 75%;
   width: 50%;
   display: flex;
   justify-content: flex-start;
