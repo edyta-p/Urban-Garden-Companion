@@ -22,7 +22,6 @@
         </div>
 
       <h2 class="pb-3 pt-3">What are the dimensions?</h2>
-<%# test 1 %>
       <div class="row">
         <div class="col-6">
           <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 0} %>
@@ -37,7 +36,7 @@
         </div>
 
           <div class="text-center pt-2">
-            <%= f.submit "Next step",class: "button pr-4 pl-4", id: "button-category" %>
+           <%= f.submit "Next step",class: " button pr-4 pl-4 w-100", data: { garden_target: "button"}, disabled: true %>
             <% end %>
           </div>
     </div>
