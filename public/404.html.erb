@@ -56,21 +56,33 @@
     height:170px;
   }
 
+  .center{
+    height: 200px;
+    weight: 400px;
+  text-align: center;
+    justify-content: center;
+    margin-top: 250px;
+  }
+
+  body {
+    position: relative;
+  }
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
+  <div>
+    <div class="center">
+      <h1>The page you were looking for doesn't exist (error: 404)</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
+      <p>If you are the application owner check the logs for more information.</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-<%= image_tag "flowers/plant-1", class: "flower", id: "two"%>
-<%= image_tag "flowers/plant-1", class: "flower", id: "three"%>
-<%# <%= image_tag "flowers/plant-4", class: "flower", id: "four"%>
-<%= image_tag "flowers/plant-1", class: "flower", id: "five"%>
+    <%= image_tag "flowers/plant-1", class: "flower", id: "one"%>
+    <%= image_tag "flowers/plant-1", class: "flower", id: "two"%>
+    <%= image_tag "flowers/plant-1", class: "flower", id: "three"%>
+    <%# <%= image_tag "flowers/plant-4", class: "flower", id: "four"%>
+    <%= image_tag "flowers/plant-1", class: "flower", id: "five"%>
   </div>
 </body>
 </html>

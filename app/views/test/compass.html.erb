@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>The page you were looking for doesn't exist (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 .flower {
@@ -71,13 +71,14 @@
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
+  <!-- This file lives in public/500.html -->
   <div>
     <div class="center">
-      <h1>The page you were looking for doesn't exist (error: 404)</h1>
+      <h1>The page you were looking for doesn't exist (error: 500)</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
       <p>If you are the application owner check the logs for more information.</p>
     </div>
+    <%= image_tag "flowers/plant-1", class: "flower", id: "one"%>
     <%= image_tag "flowers/plant-1", class: "flower", id: "two"%>
     <%= image_tag "flowers/plant-1", class: "flower", id: "three"%>
     <%# <%= image_tag "flowers/plant-4", class: "flower", id: "four"%>
