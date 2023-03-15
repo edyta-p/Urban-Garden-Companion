@@ -3,28 +3,30 @@
 
   <%= render "shared/loader", step: 2, class: "m-5" %>
   <div class="row pt-5">
-    <h2 class="pb-3">In which climate are you living?</h2>
-    <div class="d-flex justify-content-center align-items-center">
-      <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
-        <div class="row">
-          <% Garden::CLIMATE.each do |elem| %>
-            <div class="col-4 pb-3 text-center">
-              <%= f.radio_button :climate, elem, id: elem, class: "radio" %>
-              <%= f.label elem, for: elem do %>
-                <%= image_tag Garden::IMAGE_CLIMATE[elem.to_sym], class: 'img-fluid'%>
-              <p class="pt-3"><%= elem %></p>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+
+  <h2 class="pb-3">In which climate are you living?</h2>
+  <div class="d-flex justify-content-center align-items-center">
+    <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
+      <div class="row">
+        <% Garden::CLIMATE.each do |elem| %>
+          <div class="col-4 pb-3 text-center">
+            <%= f.radio_button :climate, elem, id: elem, class: "radio", data: { action: 'input->location#update'}%>
+            <%= f.label elem, for: elem do %>
+              <%= image_tag Garden::IMAGE_CLIMATE[elem.to_sym], class: 'img-fluid'%>
+            <p class="pt-3"><%= elem %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
 
         <h2>If you do not know use geolocalisation to determine it!</h2>
         <p><span data-location-target="lat" class='d-none'></span></p>
         <p><span data-location-target="lng" class='d-none'></span></p>
 
-
-      <%= button_tag "I want use geoloc", data: {action: "click->location#geo"}, type: :button, id: "lol", class: 'btn btn-primary btn-lg' %>
-      <%= f.submit 'Submit', id: "lol", class: 'btn btn-primary btn-lg'%>
+      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home' %>
+      <%= f.submit 'Submit', id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home',data: { location_target: "button"}, disabled: true %>
+      
     <% end %>
   </div>
  </div>
