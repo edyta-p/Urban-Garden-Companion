@@ -1,11 +1,8 @@
 <h2>Hi <%= @email %>,</h2>
 
-<%= link_to "click! sur ton lien", garden_url(@garden) %>
+<%= link_to "Here's your garden", garden_url(@garden, received: true) %>
 
-
-
-
-
-<p>See ya!</p>
+<p>Happy growing!</p>
+<%= image_tag attachments["icons/favicon-96x96"].url %>
 
 <%#= image_tag attachments[@path_name].url %>
