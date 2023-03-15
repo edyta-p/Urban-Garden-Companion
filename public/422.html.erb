@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>The change you wanted was rejected (422)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-.flower {
+  .flower {
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -55,29 +55,18 @@
     width:170px;
     height:170px;
   }
-
-  .center{
-    height: 200px;
-    weight: 400px;
-  text-align: center;
-    justify-content: center;
-    margin-top: 250px;
-  }
-
-  body {
-    position: relative;
-  }
   </style>
 </head>
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div>
-    <div class="center">
-      <h1>The page you were looking for doesn't exist (error: 404)</h1>
+<body class="rails-default-error-page">
+  <!-- This file lives in public/422.html -->
+  <div class="dialog">
+    <div>
+      <div>
+      <h1>The page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
-      <p>If you are the application owner check the logs for more information.</p>
     </div>
+    <p>If you are the application owner check the logs for more information.</p>
     <%= image_tag "flowers/plant-1", class: "flower", id: "two"%>
     <%= image_tag "flowers/plant-1", class: "flower", id: "three"%>
     <%# <%= image_tag "flowers/plant-4", class: "flower", id: "four"%>
