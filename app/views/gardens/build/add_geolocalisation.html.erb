@@ -1,11 +1,8 @@
 
-<div class="container pt-3 pb-5" data-controller="location" id="map2">
-
+<div class="container pt-3 pb-5" data-controller="location">
   <%= render "shared/loader", step: 2, class: "m-5" %>
-  <div class="row pt-5">
-
-  <h2 class="pb-3">In which climate are you living?</h2>
-  <div class="d-flex justify-content-center align-items-center">
+  <div class="pt-5">
+    <h2 class="pb-3">In which climate are you living?</h2>
     <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
       <div class="row">
         <% Garden::CLIMATE.each do |elem| %>
@@ -30,6 +27,4 @@
     <% end %>
     </div>
   </div>
- </div>
-
 </div>

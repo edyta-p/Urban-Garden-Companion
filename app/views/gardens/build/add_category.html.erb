@@ -3,7 +3,7 @@
 <div class="container pt-3 pb-5" data-controller="garden" data-action="resize@window->garden#update">
   <div class="row">
     <%= render "shared/loader", step: 1, class: "m-5" %>
-    <div class="col-sm-12 pt-5">
+    <div class="col-12 pt-5">
       <h2 class="pb-3">What is your available outdoor space?</h2>
 
       <%= simple_form_for @garden, url: wizard_path, method: :put, data: {garden_target: 'form'} do |f| %>

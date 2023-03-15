@@ -2,8 +2,8 @@
   <div class="row">
     <%= render "shared/loader", step: 3, class: "m-5" %>
     <div class="col-sm-12 pt-5">
-      <h2 class="pb-3">Let's find exposure of your future garden</h2>
-      <p>Place yourself in front of your <strong><%= @garden.category %></strong> So we can choose the right plants!</p>
+      <h2 class="pb-3">Let's find the exposure of your future garden</h2>
+      <p>Stand in front of your <strong><%= @garden.category %></strong>, so we can choose the right plants!</p>
       <div data-controller="compass" data-action="deviceorientationabsolute@window->compass#update" class="d-flex justify-content-center">
         <%= simple_form_for @garden, url: wizard_path, method: :put do |f| %>
         <div  class="compass">
@@ -13,7 +13,7 @@
         </div>
         <div class="fixed-bottom d-flex justify-content-center align-items-end pt-5 pb-5">
           <col-12>
-            <p data-compass-target="text"></p>
+            <p data-compass-target="text"  class='font-compass'></p>
             <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
             <%= f.submit "Pick exposure", class: 'button'%>
           </col-12>

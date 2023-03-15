@@ -33,6 +33,13 @@
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
+
+.choose-plants .check + label {
+  opacity: 1;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
 .check:checked + label {
   opacity: 1;
   filter: grayscale(0%);
