@@ -30,13 +30,13 @@
 
 .check + label {
   opacity: 1;
-  // filter: brightness(100%);
-  // -webkit-filter: brightness(100%);
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 .check:checked + label {
   opacity: 1;
-  // filter: brightness(50%);
-  // -webkit-filter: brightness(50%);
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
   background-image: url("design/square-2.png");
   background-size: contain;
   background-repeat: no-repeat;

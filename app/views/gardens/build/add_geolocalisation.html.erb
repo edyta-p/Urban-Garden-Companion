@@ -3,6 +3,7 @@
 
   <%= render "shared/loader", step: 2, class: "m-5" %>
   <div class="row pt-5">
+
   <h2 class="pb-3">In which climate are you living?</h2>
   <div class="d-flex justify-content-center align-items-center">
     <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
@@ -18,18 +19,16 @@
         <% end %>
       </div>
 
-      <h2>If you do not know use geolocalisation to determine it!</h2>
-      <p>latitude: <span data-location-target="lat"></span></p>
-      <p>longitude: <span data-location-target="lng"></span></p>
 
+        <h2>If you do not know use geolocalisation to determine it!</h2>
+        <p><span data-location-target="lat" class='d-none'></span></p>
+        <p><span data-location-target="lng" class='d-none'></span></p>
 
       <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home' %>
       <%= f.submit 'Submit', id: "lol", class: 'btn btn-primary btn-lg mt-5 btn-home',data: { location_target: "button"}, disabled: true %>
+      
     <% end %>
   </div>
+ </div>
 
-  <div class="text-center">
-    <%= link_to 'Next step', next_wizard_path, class: "btn btn-primary mt-5"%>
-    </div>
-  </div>
 </div>

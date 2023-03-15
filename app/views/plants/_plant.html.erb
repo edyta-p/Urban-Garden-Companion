@@ -7,12 +7,12 @@
   <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
 
   <div class="doc-inside">
-    <li>Name: <%= @plant.name %></li>
-    <li>Climate:  <%= plant.climate %></li>
-    <li>Exposure: <%= plant.exposure %></li>
-    <li>Watering:  <%= plant.watering %></li>
-    <li>Description:   <%= plant.description %></li>
-    <li>Plant care:    <%= plant.plant_care %></li>
+    <li style="font-size: 35px; list-style-type: none;" class="text-center mb-4"><strong> </strong> <%= @plant.name %></li>
+    <li style="list-style-type: none;"><strong>Watering:    </strong><%= image_tag "design/drops/#{plant.watering}.png", class: "image-model" %></li>
+    <li style=" list-style-type: none;"><strong>Climate:   </strong><%= plant.climate %></li>
+    <li style=" list-style-type: none;" ><strong>Exposure:    </strong><%= plant.exposure %></li>
+    <li style=" list-style-type: none; " class=" mt-4"><strong>Description:    </strong><%= plant.description %></li>
+    <li style=" list-style-type: none;"><strong>Care:   </strong><%= plant.plant_care %></li>
 
   </div>
 </div>
