@@ -13,7 +13,7 @@
             <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
 
               <div class="card-product mt-3">
-                <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+                <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase.split.join("_")}.png", class: 'img-fluid' %>
               <div class="card-product-infos">
                 <%= plant.name %>
                 <p>Quantity: <%= @garden.plants.where(id: plant).count %></p>
