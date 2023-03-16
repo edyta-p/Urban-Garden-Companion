@@ -1,17 +1,17 @@
-     <button data-action="click->overlay#closeOverlay" class="x-mark">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
+<button data-action="click->overlay#closeOverlay" class="x-mark">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+</button>
 
 <div class="plant-overlay">
   <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
 
   <div class="doc-inside">
-    <li style="font-size: 35px; list-style-type: none;" class="text-center mb-4"><strong><%= @plant.name %></strong></li>
-    <li style="list-style-type: none;"><strong>Watering:    </strong><%= image_tag "design/drops/#{plant.watering}.png", class: "image-model" %></li>
-    <li style="list-style-type: none;"><strong>Climate:   </strong><%= plant.climate %></li>
-    <li style="list-style-type: none;"><strong>Exposure:    </strong>
+    <li style="font-size: 35px; list-style-type: none; color: black;" class="text-center mb-4"><strong><%= @plant.name %></strong></li>
+    <li style="list-style-type: none; color: black;"><strong>Watering:    </strong><%= image_tag "design/drops/#{plant.watering}.png", class: "image-model" %></li>
+    <li style="list-style-type: none; color: black;"><strong>Climate:   </strong><%= plant.climate %></li>
+    <li style="list-style-type: none; color: black"><strong>Exposure:    </strong>
       <% case plant.exposure %>
       <% when "W" %>
         <%= "West" %>
@@ -23,8 +23,8 @@
         <%= "North" %>
       <% end %>
     </li>
-    <li style="list-style-type: none;"><strong>Description:    </strong><%= plant.description %></li>
-    <li style="list-style-type: none;"><strong>Care:   </strong><%= plant.plant_care %></li>
+    <li style="list-style-type: none; color: black;" class="mt-3"><strong>Description:    </strong><%= plant.description %></li>
+    <li style="list-style-type: none; color: black;"  class="mt-3"><strong>Care:   </strong><%= plant.plant_care %></li>
   </div>
 
 
