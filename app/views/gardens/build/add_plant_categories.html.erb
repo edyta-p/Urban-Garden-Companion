@@ -2,13 +2,13 @@
   <div class="row">
     <%= render "shared/loader", step: 4, class: "m-5" %>
     <div class="col-sm-12 pt-5">
-       <div class="row">
-        <h2 class="pb-3">What plants do you want to grow?</h2>
-            <%= form_with model: @garden, url: wizard_path, method: :put do |f| %>
+       <div class="row" data-controller='plants'>
+        <h2 class="pb-3">What kind of plants do you want to grow?</h2>
+            <%= form_with model: @garden, url: wizard_path, method: :put, data: {plants_target: 'form'} do |f| %>
               <div class="row choose-plants">
                 <% Plant::CATEGORY.each do |elem| %>
                   <div class="col-6 text-center">
-                    <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>">
+                    <input type="checkbox" name="garden[plant_categories][]" class='check' value="<%= elem %>" id="<%= elem %>" data-plants-target='checkbox' data-action="input->plants#checkValues">
                     <label class="" for="<%= elem %>">
                       <%= image_tag Plant::IMAGE_PLANT_CATEGORY[elem.to_sym], class: 'img-fluid' %>
                       <p class="pt-3"><%= elem %></p>
@@ -16,7 +16,7 @@
                   </div>
                 <% end %>
                 <div class="text-center">
-              <%= f.submit "Generate your garden!", class:"button w-100"%>
+              <%= f.submit "Generate your garden!", class: "button-disabled w-100", data: {plants_target: 'button'}, disabled: true %>
             <% end %>
             </div>
       </div>

@@ -1,6 +1,6 @@
-meta_name: "garden name"
-meta_title: "garden name - Urban Garden"
-meta_description: "Relevant description"
+meta_name: "Urban Garden"
+meta_title: "Small seeds, greener cities!"
+meta_description: "Smart gardening device that will help you grow plants on your windowsill, balcony or terrace."
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@your_twitter_account"   # required for Twitter Cards
 

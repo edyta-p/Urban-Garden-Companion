@@ -5,7 +5,7 @@
 </button>
 
 <div class="plant-overlay">
-  <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase}.png", class: 'img-fluid' %>
+  <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase.split.join('_')}.png", class: 'img-fluid' %>
 
   <div class="doc-inside">
     <li style="font-size: 35px; list-style-type: none; color: black;" class="text-center mb-4"><strong><%= @plant.name %></strong></li>
