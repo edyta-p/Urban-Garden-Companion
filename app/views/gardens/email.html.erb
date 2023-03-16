@@ -1,11 +1,15 @@
 <div class="background-end vh-100">
   <div class="container pt-3 pb-5">
     <div class="row text-center" style="padding-top: 30vh">
-      <h2>Receive the recap by email:</h2>
+      <h2 class="pb-2">Receive the recap by email:</h2>
         <%= form_with url: send_email_garden_path do |f| %>
-          <%= f.email_field :email %>
-          <%= f.submit "Send", class:"button", id: "button-send" %>
-          <p><%= notice %></p>
+          <div class="pb-3">
+            <%= f.email_field :email, class:"w-100" %>
+           </div>
+           <div>
+            <%= f.submit "Send", class:"button w-100", id: "" %>
+            <p class="pt-2"><%= notice %></p>
+          </div>
         <% end %>
       <div class="pt-5 pb-5" data-controller="share" data-share-url-value="<%= @url %>">
         <div class="separator">
