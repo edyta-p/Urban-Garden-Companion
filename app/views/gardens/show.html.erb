@@ -9,7 +9,7 @@
       <%# <p><strong>!!The final plants!!</strong></p> %>
       <div class="row" >
         <% @garden.plants.uniq.each do |plant| %>
-          <div class="text-center">
+          <div class="">
             <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
 
               <div class="card-product mt-3">
@@ -27,7 +27,7 @@
       </div>
 
   <div class ="text-center">
-    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "button mt-3" %>
+    <%= link_to "Receive your garden by email", email_garden_path(@garden), class: "button mt-5 w-100" %>
   </div>
    <div class="overlay-filter" data-overlay-target="filter"></div>
    <div class="overlay" data-overlay-target="overlay">

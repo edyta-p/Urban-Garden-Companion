@@ -2,7 +2,7 @@
 <div class="container pt-3 pb-5" data-controller="location">
   <%= render "shared/loader", step: 2, class: "m-5" %>
   <div class="pt-5">
-    <h2 class="pb-3">In which climate are you living?</h2>
+    <h2 class="pb-3">How would you describe your climate?</h2>
     <%= simple_form_for @garden, url: wizard_path, method: :put, data: {location_target: 'form'} do |f| %>
       <div class="row">
         <% Garden::CLIMATE.each do |elem| %>
@@ -17,13 +17,13 @@
       </div>
 
 
-        <h6>If you do not know, use the geolocalisation to determine it!</h6>
-        <p><span data-location-target="lat" class='d-none'></span></p>
-        <p><span data-location-target="lng" class='d-none'></span></p>
+        <p class="mt-5 text-center">If you don't know your climate, use your current location to determine it!</p>
+        <span data-location-target="lat" class='d-none'></span>
+        <span data-location-target="lng" class='d-none'></span>
 
       <div class="button-middle">
-      <%= button_tag "I want to use geolocalisation", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button  w-100', id:"le-button" %>
-      <%= f.submit 'Submit', class: 'button-disabled mt-4 w-100',data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
+      <%= button_tag "Share your current location", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button  w-100 mb-3', id:"le-button" %>
+      <%= f.submit 'Next step', class: 'button-disabled mt-5 w-100',data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
     <% end %>
     </div>
   </div>
