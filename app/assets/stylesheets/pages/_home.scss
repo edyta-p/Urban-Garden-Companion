@@ -1,11 +1,18 @@
 // Specific CSS for your home-page
 
 .background-home {
-background-image: url("design/home-gif-2.gif");
+background-image: url("design/home-gif-3.gif");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center top;
 }
+
+.background-end {
+  background-image: url("design/illustr-end.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  }
 
 .btn-home {
 padding-top: 50vh;
@@ -58,4 +65,8 @@ padding-top: 50vh;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+
+.row {
+  --bs-gutter-x: 0.5rem !important;
 }
