@@ -31,9 +31,19 @@
     border: transparent;
     color: #000000;
   }
+  #pick-button{
+    width: 100%;
+  }
+
 }
 
 .button-middle{
   padding-bottom: 15px;
   margin-bottom: 20px;
+}
+
+#le-button{
+  background-color: white;
+  color: #000000;
+  border-radius: 15px;
 }
