@@ -1,30 +1,21 @@
-<%# <%= image_tag "flowers/plant-1", class: "flower", id: "one"%>
-<%# <%= image_tag "flowers/plant-1", class: "flower", id: "two"%>
-<%# <%= image_tag "flowers/plant-1", class: "flower", id: "three"%>
-<%# <%= image_tag "flowers/plant-1", class: "flower", id: "five"%>
-
 <div class="background-end vh-100">
-  <div class="d-flex justify-content-center align-items-center w-100 h-100">
-    <div class="d-flex flex-column justify-content-between align-items-center first_div pt-5" >
-      <div class="share_email d-flex flex-column justify-content-center align-items-center">
+  <div class="container pt-3 pb-5">
+    <div class="row text-center" style="padding-top: 30vh">
       <h2>Receive the recap by email:</h2>
         <%= form_with url: send_email_garden_path do |f| %>
           <%= f.email_field :email %>
           <%= f.submit "Send", class:"button", id: "button-send" %>
           <p><%= notice %></p>
         <% end %>
-      </div>
-      <div class="d-flex flex-column justify-content-evenly align-items-center pt-3" data-controller="share" data-share-url-value="<%= @url %>">
-      <div class="separator">
-        <span class="line"></span>
-        <h2>Share your garden</h2>
-
-        <span class="line"></span>
-
-      </div>
-        <button data-action="click->share#send" class="button mt-3 w-100">⚘ Share ⚘</button>
-      </div>
-      <div class="text-center">
+      <div class="pt-5 pb-5" data-controller="share" data-share-url-value="<%= @url %>">
+        <div class="separator">
+          <span class="line"></span>
+          <h2>Share your garden</h2>
+          <span class="line"></span>
+        </div>
+          <button data-action="click->share#send" class="button mt-3 w-100">⚘ Share ⚘</button>
+        </div>
+      <div class="pt-5 mt-5">
         <%= link_to "Go back", garden_path(@garden), class: "button", id:"button-last"%>
       </div>
     </div>
