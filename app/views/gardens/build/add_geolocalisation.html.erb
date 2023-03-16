@@ -22,8 +22,10 @@
         <p><span data-location-target="lng" class='d-none'></span></p>
 
       <div class="button-middle">
-      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button  w-100', id:"le-button"%>
-      <%= f.submit 'Submit', class: 'button mt-4 w-100',data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
+
+      <%= button_tag "I want use geoloc", data: {location_target: "climate", action: "click->location#geo"}, type: :button, class: 'button  w-100' %>
+      <%= f.submit 'Submit', class: 'button mt-4 w-100', data: { location_target: "button"}, disabled: true, id: "button-geoloc" %>
+
     <% end %>
     </div>
   </div>
