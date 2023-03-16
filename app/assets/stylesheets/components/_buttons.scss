@@ -31,12 +31,17 @@
     border: transparent;
     color: #000000;
   }
+  #pick-button{
+    width: 100%;
+  }
+
 }
 
 .button-middle{
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
+
 
 .button-disabled {
   font-family: lato,sans-serif;
@@ -61,4 +66,10 @@
 .button-disabled:hover {
   background-color: #000000;
   transition: all 0.3s ease-in-out;
+
+#le-button{
+  background-color: white;
+  color: #000000;
+  border-radius: 15px;
+
 }

@@ -14,8 +14,8 @@ class GardensController < ApplicationController
   end
 
   def send_email
-
     SendPdfMailer.with(email: params[:email], garden: @garden).your_garden.deliver_later
+    redirect_to email_garden_path(@garden), notice: "Mail successfully sent"
   end
 
   private
