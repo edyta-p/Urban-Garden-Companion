@@ -13,10 +13,10 @@
             <div data-action="click->overlay#openOverlay" data-plant-id="<%= plant.id %>">
 
               <div class="card-product mt-3">
-                <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase.split.join("_")}.png", class: 'img-fluid' %>
-              <div class="card-product-infos">
+                <%= image_tag "plantes/#{plant.category.chop.downcase}_#{plant.name.downcase.split.join("_")}.png", class: 'img-fluid', style:"color: black;" %>
+              <div class="card-product-infos", style="color: black;">
                 <%= plant.name %>
-                <p>Quantity: <%= @garden.plants.where(id: plant).count %></p>
+                <p style="color: black;">Quantity: <%= @garden.plants.where(id: plant).count %></p>
                 <p id="gris">Click for more info</p>
               </div>
             </div>
