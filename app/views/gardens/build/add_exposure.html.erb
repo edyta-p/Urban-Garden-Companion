@@ -13,9 +13,9 @@
         </div>
         <div class="fixed-bottom d-flex justify-content-center align-items-end pt-5 pb-5">
           <col-12>
-            <p data-compass-target="text"  class='font-compass'></p>
-            <%= f.input :exposure, input_html: { data: {compass_target: "input" } }%>
-            <%= f.submit "Pick exposure", class: 'button w-100'%>
+            <p data-compass-target="text"  class='font-compass text-center'></p>
+            <span class='d-none'><%= f.input :exposure, input_html: { data: {compass_target: "input" } } %></span>
+            <%= f.submit "Pick exposure", class: 'button w-100' %>
           </col-12>
           <% end %>
         </div>

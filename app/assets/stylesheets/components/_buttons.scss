@@ -37,3 +37,28 @@
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
+
+.button-disabled {
+  font-family: lato,sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-family: "Lexend", "Helvetica", "sans-serif";
+}
+
+.button-disabled:disabled {
+  background-color: $medium-gray;
+}
+
+.button-disabled:hover {
+  background-color: #000000;
+  transition: all 0.3s ease-in-out;
+}

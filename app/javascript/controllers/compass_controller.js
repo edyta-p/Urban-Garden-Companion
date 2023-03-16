@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="compass"
 export default class extends Controller {
-  static targets = ["compassCircle", "input", "text"];
+  static targets = ["compassCircle", "input", "text", "button"];
 
   update(event) {
     this.compass = event.webkitCompassHeading || Math.abs(event.alpha - 360)

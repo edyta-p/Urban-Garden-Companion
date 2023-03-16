@@ -12,7 +12,7 @@
 
             <div class="col-4 pb-3 text-center">
 
-              <%= f.radio_button :category, elem, id: elem, class: "radio", data: { garden_target: "category", action: "input->garden#update"} %>
+              <%= f.radio_button :category, elem, id: elem, class: "radio", data: { garden_target: "category", action: "input->garden#categoryUpdate"} %>
               <%= f.label elem, for: elem do %>
                 <%= image_tag Garden::IMAGE_CATEGORY[elem.to_sym], class: 'img-fluid' %>
                 <p class="pt-3"><%= elem %></p>
@@ -24,19 +24,20 @@
       <h2 class="pb-3 pt-3">What are the dimensions?</h2>
       <div class="row">
         <div class="col-6">
-          <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}, value: 0} %>
+          <%= f.input :length, label: 'Length [cm]', input_html: { data: {garden_target: "inputWidth", action: "input->garden#update"}} %>
         </div>
         <div class="col-6">
-          <%= f.input :width, label: 'Width [cm]', input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}, value: 0} %>
+          <%= f.input :width, label: 'Width [cm]', input_html: { data: {garden_target: "inputHeight", action: "input->garden#update"}} %>
         </div>
       </div>
-
+        <h6 class="pb-3 pt-3">Here's the view of your space!</h6>
         <div class="garden-container" data-garden-target="container">
-          <div class="garden" data-garden-target="garden"></div>
+          <div class="garden" data-garden-target="garden" id='garden'>
+          </div>
         </div>
 
           <div class="text-center pt-2">
-           <%= f.submit "Submit",class: " button pr-4 pl-4 w-100", data: { garden_target: "button"}, disabled: true %>
+           <%= f.submit "Submit", class: "button-disabled pr-4 pl-4 mt-3 w-100", data: { garden_target: "button"}, disabled: true %>
             <% end %>
           </div>
     </div>
