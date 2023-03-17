@@ -13,7 +13,7 @@ export default class extends Controller {
     console.log("je suis");
      if (this.compass < 45 || this.compass > 260) {
       this.inputTarget.value = "N"
-      this.textTarget.innerText = "Nord"
+      this.textTarget.innerText = "North"
     } else if (this.compass > 45 && this.compass < 120){
       this.inputTarget.value = "E"
       this.textTarget.innerText = "East"
