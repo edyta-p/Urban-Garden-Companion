@@ -1,16 +1,19 @@
-<div class="body">
-  <div class="contain" data-controller="loader" data-loader-percent-value="<%= (step / Gardens::BuildController::STEP_COUNTER.to_f * 100).to_i %>">
-    <div class="progress"></div>
-      <div class="percent" data-loader-target="percent" style="width: calc(<%= (step / Gardens::BuildController::STEP_COUNTER.to_f * 100).to_i - 25 %>% - 40px);"></div>
-    <div class="steps">
-    <% 4.times do |i| %>
-      <% i = i + 1 %>
-      <div class="step
-        <%= 'completed' if step > i %>
-        <%= 'just-completed' if step - 1 == i %>
-        <%= 'selected' if step == i %>"></div>
-    <% end %>
-    </div>
-  </div>
+<%# <div class="body"> %>
+  <%# <div class="contain" data-controller="loader" data-loader-percent-value="<%= (step / Gardens::BuildController::STEP_COUNTER.to_f * 100).to_i %>
+  <%# "> %>
+    <%# <div class="progress"></div> %>
+      <%# <div class="percent" data-loader-target="percent" style="width: calc(<%= (step / Gardens::BuildController::STEP_COUNTER.to_f * 100).to_i - 25 %>
+      <%# % - 40px);"></div> %>
+    <%# <div class="steps"> %>
+    <%# <% 4.times do |i| %>
+      <%# <% i = i + 1 %>
+      <%# <div class="step %>
+        <%# <%= 'completed' if step > i %>
+        <%# <%= 'just-completed' if step - 1 == i %>
+        <%# <%= 'selected' if step == i %>
+        <%# "></div> %>
+    <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
 
-</div>
+<%# </div> %>
