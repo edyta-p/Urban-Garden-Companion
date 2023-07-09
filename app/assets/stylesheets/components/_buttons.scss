@@ -4,14 +4,15 @@
   font-size: 1em;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   display: inline-block;
   padding: 10px 40px 10px 40px;
   position: relative;
-  background-color: #000000;
-  border: 2px solid #000000;
-  border-radius: 8px;
+  background-color: black;
+  border: 0px solid #000000;
+  // border-radius: 8px;
   font-family: "Lexend", "Helvetica", "sans-serif";
+  z-index: 2;
   &#button-category{
     padding-left: 70px;
     padding-right: 70px;
@@ -27,9 +28,9 @@
     padding-bottom: 6px;
   }
   &#button-last{
-    background-color: transparent;
-    border: transparent;
-    color: #000000;
+    background-color: black;
+    border: 0px solid #000000;
+    color: white;
   }
   #pick-button{
     width: 100%;
@@ -49,29 +50,29 @@
   font-size: 1em;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   display: inline-block;
   padding: 10px 40px 10px 40px;
   position: relative;
-  background-color: #000000;
-  border: 2px solid #000000;
-  border-radius: 8px;
+  background-color: black;
+  border: 0px solid #000000;
+  // border-radius: 8px;
   font-family: "Lexend", "Helvetica", "sans-serif";
 }
 
-.button-disabled:disabled {
-  background-color: $medium-gray;
-}
+// .button-disabled:disabled {
+//   background-color: $medium-gray;
+// }
 
 .button-disabled:hover {
-  background-color: #000000;
+  background-color: transparent;
   transition: all 0.3s ease-in-out;
 }
 
 #le-button{
-  background-color: white;
-  color: #000000;
-  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  // border-radius: 8px;
 
 }
 
